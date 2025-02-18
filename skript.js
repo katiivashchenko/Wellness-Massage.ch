@@ -1,19 +1,19 @@
-// Плавная прокрутка при клике на ссылки меню
+// Sanftes Scrollen bei Klick auf Menü-Links
 document.querySelectorAll('nav ul li a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault(); // предотвращаем стандартное поведение ссылки
+    e.preventDefault(); // Verhindert das Standardverhalten des Links
 
-    const targetId = this.getAttribute('href').substring(1); // получаем ID целевой секции
-    const targetElement = document.getElementById(targetId); // находим элемент
+    const targetId = this.getAttribute('href').substring(1); // Holt die ID der Zielsektion
+    const targetElement = document.getElementById(targetId); // Findet das Ziel-Element
 
     window.scrollTo({
-      top: targetElement.offsetTop - 20, // прокручиваем к нужной секции с небольшим отступом
-      behavior: 'smooth' // плавная прокрутка
+      top: targetElement.offsetTop - 20, // Scrollt mit kleinem Abstand zur gewünschten Sektion
+      behavior: 'smooth' // Sanftes Scrollen
     });
   });
 });
 
-// Функция для анимации (пример плавного появления элементов на странице)
+// Funktion für Animation (Beispiel für sanftes Erscheinen der Sektionen)
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll('section');
 
@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Функция для анимации на основе прокрутки
+// Funktion für Animation basierend auf dem Scrollen
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
-  // Добавляем классы для анимации, когда секция появляется в области видимости
+  // Fügt die Klasse für Animation hinzu, wenn die Sektion im sichtbaren Bereich erscheint
   document.querySelectorAll('section').forEach((section, index) => {
     if (section.offsetTop - 200 < scrollY) {
       section.classList.add('visible');
