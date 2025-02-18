@@ -1,73 +1,97 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Общий стиль */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000;
+  color: #D3D3D3;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in-out;
 }
 
-body {
-    background-color: black;
-    color: silver;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  color: #C0C0C0;
 }
 
 a {
-    color: gold;
-    text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: black;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav li {
-    margin: 0 10px;
-}
-
-#main-content {
-    padding: 20px;
-}
-
-#home {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 2em;
-    animation: flash 2s infinite;
-}
-
-@keyframes flash {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-section {
-    margin: 20px 0;
-}
-
-section#contact {
-    background-color: black;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#google-map {
-    height: 400px;
-    width: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
+  padding: 0;
 }
 
-ul li {
-    margin-bottom: 10px;
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo a {
+  font-size: 24px;
+  color: #FFD700; /* золотистый цвет */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  font-size: 18px;
+  color: #C0C0C0;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Секции */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+section#home {
+  background-color: #111;
+}
+
+section#services, section#reviews, section#advantages {
+  background-color: #222;
+}
+
+footer {
+  background-color: #111;
+  color: #C0C0C0;
+  text-align: center;
+  padding: 20px;
+}
+
+.review {
+  background-color: #333;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
