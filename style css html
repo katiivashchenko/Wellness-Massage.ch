@@ -1,156 +1,33 @@
-/* Основной стиль для тела страницы */
-body {
-    background-color: black; /* Черный фон */
-    color: silver; /* Серый текст */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-/* Эффект мерцания для золотого текста */
-.shimmer {
-    color: gold;
-    text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold;
-    animation: shimmer 1.5s infinite linear;
-}
-
-/* Анимация для мерцания текста */
-@keyframes shimmer {
-    0% { text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold; }
-    50% { text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold, 0 0 40px gold; }
-    100% { text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold, 0 0 20px gold; }
-}
-
-/* Стили для хедера и навигации */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    z-index: 1000;
-}
-
+/* Стили для навигационного меню */
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-right: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: silver;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #000;
 }
 
-nav ul li a:hover {
-    color: gold;
+/* Стили для контейнера карты */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
-/* Стили для кнопки меню */
-.menu-button {
-    color: silver;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-/* Анимация для загрузки страниц */
-@keyframes flash {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.page-content {
-    animation: flash 1s infinite;
-}
-
-/* Стили для футера */
-footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    text-align: center;
-    color: silver;
-}
-
-/* Респонсивный дизайн для мобильных устройств */
-@media screen and (max-width: 768px) {
-    header {
-        font-size: 16px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .menu-button {
-        font-size: 20px;
-    }
-}
-
-/* Стиль для блоков с отзывами и фото */
-.review-section {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 50px;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.review-section h2 {
-    color: gold;
-    margin-bottom: 30px;
-}
-
-.review-item {
-    display: inline-block;
-    width: 300px;
-    margin: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.review-item img {
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.review-item p {
-    color: silver;
-}
-
-/* Стили для раздела "Meine Vorteile" */
-.advantages-section {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 50px;
-    text-align: center;
-}
-
-.advantages-section h2 {
-    color: gold;
-    margin-bottom: 30px;
-}
-
-.advantages-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.advantages-list li {
-    color: silver;
-    margin: 10px 0;
+    height: 100%;
+    border: 0;
 }
