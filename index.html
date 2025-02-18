@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wellness Massage</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS файла -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wellness-Massage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="main-content">
+        <header>
+            <div class="logo">WM</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Startseite</a></li>
+                    <li><a href="#services">Dienstleistungen</a></li>
+                    <li><a href="#reviews">Kundenbewertungen</a></li>
+                    <li><a href="#advantages">Meine Vorteile</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <!-- Навигационное меню -->
-  <nav>
-    <ul>
-      <li><a href="#home">Главная</a></li>
-      <li><a href="#services">Услуги</a></li>
-      <li><a href="#reviews">Отзывы</a></li>
-      <li><a href="#advantages">Мои преимущества</a></li>
-    </ul>
-  </nav>
+        <section id="home">
+            <div class="animation-effect">Willkommen auf meiner Seite!</div>
+        </section>
 
-  <!-- Контент страницы -->
-  <div id="home">
-    <h1>Добро пожаловать на сайт Wellness Massage</h1>
-    <!-- Другой контент страницы -->
-  </div>
+        <section id="services">
+            <h2>Meine Dienstleistungen</h2>
+            <p>Massage, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+        </section>
 
-  <div id="services">
-    <h2>Наши услуги</h2>
-    <!-- Список услуг -->
-  </div>
+        <section id="reviews">
+            <h2>Kundenbewertungen</h2>
+            <div class="review">"Tolle Erfahrung!" - Maria</div>
+            <div class="review">"Sehr professionell und freundlich." - Anna</div>
+        </section>
 
-  <div id="reviews">
-    <h2>Отзывы</h2>
-    <!-- Секция отзывов -->
-  </div>
+        <section id="advantages">
+            <h2>Meine Vorteile</h2>
+            <p>Erfahren Sie mehr über die Vorteile meiner Dienstleistungen.</p>
+        </section>
+    </div>
 
-  <div id="advantages">
-    <h2>Мои преимущества</h2>
-    <!-- Описание преимуществ -->
-  </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
