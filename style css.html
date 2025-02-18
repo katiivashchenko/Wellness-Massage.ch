@@ -1,17 +1,16 @@
 /* Общий стиль */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #000;
-  color: #D3D3D3;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  animation: fadeIn 1s ease-in-out;
+  background-color: #111;
+  color: #C0C0C0;
 }
 
 h1, h2, h3 {
   font-family: 'Georgia', serif;
-  color: #C0C0C0;
+  color: #FFD700; /* золотистый цвет */
 }
 
 a {
@@ -25,16 +24,21 @@ ul {
 }
 
 header {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 header .logo a {
   font-size: 24px;
-  color: #FFD700; /* золотистый цвет */
+  color: #FFD700;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -64,12 +68,48 @@ section {
   text-align: center;
 }
 
-section#home {
-  background-color: #111;
+.section-home {
+  background-image: url('background.jpg'); /* Укажите путь к изображению фона */
+  background-size: cover;
+  background-position: center;
+  color: #FFD700;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-section#services, section#reviews, section#advantages {
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section-services, .section-reviews, .section-advantages {
   background-color: #222;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  width: 30%;
+  margin: 20px;
+  text-align: center;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.section-advantages ul {
+  padding: 0;
 }
 
 footer {
@@ -77,13 +117,6 @@ footer {
   color: #C0C0C0;
   text-align: center;
   padding: 20px;
-}
-
-.review {
-  background-color: #333;
-  padding: 15px;
-  margin: 20px 0;
-  border-radius: 5px;
 }
 
 /* Анимация плавного появления */
@@ -98,7 +131,6 @@ section.visible {
   transform: translateY(0);
 }
 
-/* Анимация */
 @keyframes fadeIn {
   0% {
     opacity: 0;
