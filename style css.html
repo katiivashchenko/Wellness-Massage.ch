@@ -1,25 +1,79 @@
+/* Стилизация всего документа */
 body {
-    background-color: #FAE7B5; /* Светло-золотой фон */
-    color: #4A4A4A; /* Темно-серебряный текст */
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Черный фон */
+  color: #C0C0C0; /* Серый цвет текста */
 }
 
-h1, h2, h3 {
-    color: #333333; /* Темно-серебряный цвет заголовков */
+/* Стилизация меню */
+nav {
+  background-color: #333;
+  padding: 10px;
 }
 
-a {
-    color: #555555; /* Цвет ссылок */
-    text-decoration: none;
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
-a:hover {
-    color: #222222;
-    text-decoration: underline;
+nav ul li {
+  display: inline;
+  margin-right: 20px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+nav ul li a {
+  color: #C0C0C0; /* Серый цвет текста */
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #FFD700; /* Золотой цвет при наведении */
+}
+
+/* Стили для секций */
+#home, #services, #reviews, #advantages {
+  padding: 20px;
+  text-align: center;
+}
+
+#home h1, #services h2, #reviews h2, #advantages h2 {
+  color: #FFD700; /* Золотой цвет для заголовков */
+}
+
+/* Анимация при загрузке страницы */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Стилизация для адаптивного дизайна */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 14px;
+  }
 }
