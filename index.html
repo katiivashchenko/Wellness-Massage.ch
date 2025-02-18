@@ -8,58 +8,62 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="main-content">
-        <header>
-            <div class="logo">WM</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Startseite</a></li>
-                    <li><a href="#services">Dienstleistungen</a></li>
-                    <li><a href="#about">Über mich</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                    <li><a href="#impressum">Impressum</a></li>
-                    <li><a href="#datenschutz">Datenschutz</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section id="home">
-            <div class="animation-effect">Willkommen auf meiner Seite!</div>
-        </section>
-
-        <section id="services">
-            <h2>Meine Dienstleistungen</h2>
+    <header>
+        <div class="logo">WM</div>
+        <nav>
             <ul>
-                <li>Massage</li>
-                <li>Maniküre & Pediküre</li>
-                <li>Waxing</li>
-                <li>Laser-Haarentfernung</li>
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="services/massage.html">Massage</a></li>
+                <li><a href="services/manicure-pedicure.html">Maniküre & Pediküre</a></li>
+                <li><a href="services/waxing.html">Waxing</a></li>
+                <li><a href="services/laser-hair-removal.html">Laser-Haarentfernung</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#impressum">Impressum</a></li>
+                <li><a href="#datenschutz">Datenschutz</a></li>
             </ul>
-        </section>
+        </nav>
+    </header>
 
-        <section id="about">
-            <h2>Über mich</h2>
-            <p>Ich bin eine professionelle Masseurin mit langjähriger Erfahrung in der Schönheitsbranche.</p>
-        </section>
+    <section id="home">
+        <div class="animation-effect">Willkommen auf meiner Seite!</div>
+    </section>
 
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Adresse: Löwengartenstrasse 12, 9400 Rorschach</p>
-            <p>Telefon: +41 79 861 53 88</p>
-            <div id="google-map"></div>
-        </section>
+    <section id="services">
+        <h2>Meine Dienstleistungen</h2>
+        <ul>
+            <li><a href="services/massage.html">Massage</a></li>
+            <li><a href="services/manicure-pedicure.html">Maniküre & Pediküre</a></li>
+            <li><a href="services/waxing.html">Waxing</a></li>
+            <li><a href="services/laser-hair-removal.html">Laser-Haarentfernung</a></li>
+        </ul>
+    </section>
 
-        <section id="impressum">
-            <h2>Impressum</h2>
-            <p>Hier kommt der rechtliche Text zum Impressum.</p>
-        </section>
+    <section id="about">
+        <h2>Über mich</h2>
+        <p>Ich bin eine professionelle Masseurin mit langjähriger Erfahrung in der Schönheitsbranche.</p>
+    </section>
 
-        <section id="datenschutz">
-            <h2>Datenschutz</h2>
-            <p>Informationen über den Datenschutz finden Sie hier.</p>
-        </section>
-    </div>
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Adresse: Löwengartenstrasse 12, 9400 Rorschach</p>
+        <p>Telefon: +41 79 861 53 88</p>
+        <div id="google-map"></div>
+    </section>
+
+    <section id="impressum">
+        <h2>Impressum</h2>
+        <p>Hier kommt der rechtliche Text zum Impressum.</p>
+    </section>
+
+    <section id="datenschutz">
+        <h2>Datenschutz</h2>
+        <p>Informationen über den Datenschutz finden Sie hier.</p>
+    </section>
 
     <script src="script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 </body>
 </html>
