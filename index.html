@@ -20,19 +20,19 @@
             font-weight: bold;
             white-space: nowrap;
         }
-        .logo span {
-            display: block;
-        }
         .menu {
             position: absolute;
             top: 10px;
             right: 20px;
             font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
         .menu a {
             color: gold;
             text-decoration: none;
-            margin-left: 10px;
+            margin: 2px 0;
         }
         .services, .reviews, .advantages, .contact-info, .map {
             max-width: 600px;
@@ -62,12 +62,16 @@
     </style>
 </head>
 <body>
-    <div class="logo"><span>Wellness</span><span>& Massage</span></div>
+    <div class="logo">Wellness & Massage</div>
     <div class="menu">
-        <a href="preise.html">Preisliste</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="datenschutz.html">Datenschutz</a>
-        <a href="impressum.html">Impressum</a>
+        <div>
+            <a href="preise.html">Preisliste</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="impressum.html">Impressum</a>
+        </div>
     </div>
     <h1>Willkommen bei Wellness & Massage</h1>
     <div class="services">
