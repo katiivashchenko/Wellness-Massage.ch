@@ -1,82 +1,84 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Wellness Massage</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness&Massage</title>
+    <style>
+        body {
+            background-color: black;
+            color: silver;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: gold;
+            text-shadow: 0 0 5px gold;
+        }
+        .menu {
+            margin: 20px;
+        }
+        .menu a {
+            color: silver;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 20px;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .services {
+            display: none;
+        }
+        .price-list {
+            margin-top: 20px;
+            color: gold;
+        }
+        .reviews {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="#">WM</a>
+    <h1>Wellness&Massage</h1>
+    <div class="menu">
+        <a href="#" onclick="toggleServices()">Startseite</a>
+        <a href="#preisliste">Preisliste</a>
+        <a href="#kontakte">Kontakte</a>
+        <a href="#datenschutz" target="_blank">Datenschutz</a>
+        <a href="#impressum" target="_blank">Impressum</a>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Startseite</a></li>
-        <li><a href="#services">Dienstleistungen</a></li>
-        <li><a href="#reviews">Bewertungen</a></li>
-        <li><a href="#advantages">Meine Vorteile</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home" class="section-home">
-      <div class="overlay">
-        <h1>Willkommen bei Wellness Massage</h1>
-        <p>Genießen Sie unsere einzigartigen Massagen und Dienstleistungen.</p>
-      </div>
-    </section>
-
-    <section id="services" class="section-services">
-      <h2>Unsere Dienstleistungen</h2>
-      <div class="service-list">
-        <div class="service-item">
-          <img src="massage.jpg" alt="Massage">
-          <h3>Massage</h3>
-          <p>Entspannen Sie sich und regenerieren Sie Ihre Energie mit unseren professionellen Massagen.</p>
-        </div>
-        <div class="service-item">
-          <img src="manicure.jpg" alt="Maniküre">
-          <h3>Maniküre</h3>
-          <p>Verleihen Sie Ihren Händen Glanz mit unseren Maniküre-Dienstleistungen.</p>
-        </div>
-        <div class="service-item">
-          <img src="pedicure.jpg" alt="Pediküre">
-          <h3>Pediküre</h3>
-          <p>Perfekte Füße mit unseren professionellen Pediküre-Behandlungen.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews" class="section-reviews">
-      <h2>Kundenbewertungen</h2>
-      <div class="review">
-        <p>"Die beste Massage, die ich je hatte!"</p>
-        <p>- Max Mustermann</p>
-      </div>
-      <div class="review">
-        <p>"Ich bin sehr zufrieden mit den Dienstleistungen!"</p>
-        <p>- Julia Müller</p>
-      </div>
-    </section>
-
-    <section id="advantages" class="section-advantages">
-      <h2>Meine Vorteile</h2>
-      <ul>
-        <li>Professionelle Behandlungen</li>
-        <li>Freundlicher Service</li>
-        <li>Komfortable Atmosphäre</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Wellness Massage</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <div id="services" class="services">
+        <p><a href="massage.html" target="_blank">Massage</a></p>
+        <p><a href="manikure.html" target="_blank">Maniküre</a></p>
+        <p><a href="pedikure.html" target="_blank">Pediküre</a></p>
+        <p><a href="waxing.html" target="_blank">Waxing</a></p>
+        <p><a href="laser.html" target="_blank">Haarentfernung mit Laser</a></p>
+    </div>
+    <div id="preisliste" class="price-list">
+        <h2>Preisliste</h2>
+        <p>Massage: 80 CHF / 60 min</p>
+        <p>Maniküre: 40 CHF</p>
+        <p>Pediküre: 50 CHF</p>
+        <p>Waxing: ab 30 CHF</p>
+        <p>Haarentfernung mit Laser: ab 50 CHF</p>
+    </div>
+    <div id="kontakte">
+        <h2>Kontakte</h2>
+        <p>Adresse: Löwengartenstrasse 12, 9400 Rorschach</p>
+        <p>Telefon: +41 79 861 53 88</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="reviews">
+        <h2>Kundenbewertungen</h2>
+        <p><img src="review1.jpg" alt="Kunde 1" width="100"> Super Service!</p>
+        <p><img src="review2.jpg" alt="Kunde 2" width="100"> Sehr zufrieden!</p>
+        <p><img src="review3.jpg" alt="Kunde 3" width="100"> Empfehlenswert!</p>
+    </div>
+    <script>
+        function toggleServices() {
+            var services = document.getElementById("services");
+            services.style.display = services.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
