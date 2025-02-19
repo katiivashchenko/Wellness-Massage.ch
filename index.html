@@ -9,76 +9,31 @@
             color: silver;
             font-family: Arial, sans-serif;
             text-align: center;
+            padding: 20px;
         }
         h1 {
             color: gold;
-            text-shadow: 0 0 5px gold;
         }
         .menu {
-            margin: 20px;
+            margin: 20px 0;
         }
         .menu a {
-            color: silver;
-            text-decoration: none;
-            margin: 10px;
-            font-size: 20px;
-        }
-        .menu a:hover {
-            text-decoration: underline;
-        }
-        .services {
-            display: none;
-        }
-        .price {
-            margin-top: 20px;
             color: gold;
-        }
-        .reviews {
-            margin-top: 30px;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
     <h1>Wellness&Massage</h1>
     <div class="menu">
-        <a href="#" onclick="toggleServices()">Startseite</a>
-        <a href="#preisliste">Preis</a>
-        <a href="#kontakte">Kontakte</a>
-        <a href="datenschutz.html" target="_blank">Datenschutz</a>
-        <a href="impressum.html" target="_blank">Impressum</a>
+        <a href="index.html">Startseite</a>
+        <a href="preise.html">Preisliste</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
     </div>
-    <div id="services" class="services">
-        <p><a href="massage.html" target="_blank">Massage</a></p>
-        <p><a href="manikure.html" target="_blank">Maniküre</a></p>
-        <p><a href="pedikure.html" target="_blank">Pediküre</a></p>
-        <p><a href="waxing.html" target="_blank">Waxing</a></p>
-        <p><a href="laser.html" target="_blank">Haarentfernung mit Laser</a></p>
-    </div>
-    <div id="preisliste" class="price-list">
-        <h2>Preis</h2>
-        <p>Massage: 80 CHF / 60 min</p>
-        <p>Maniküre: 40 CHF</p>
-        <p>Pediküre: 50 CHF</p>
-        <p>Waxing: ab 30 CHF</p>
-        <p>Haarentfernung mit Laser: ab 50 CHF</p>
-    </div>
-    <div id="kontakte">
-        <h2>Kontakte</h2>
-        <p>Adresse: Löwengartenstrasse 12, 9400 Rorschach</p>
-        <p>Telefon: +41 79 861 53 88</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="reviews">
-        <h2>Kundenbewertungen</h2>
-        <p><img src="review1.jpg" alt="Kunde 1" width="100"> Super Service!</p>
-        <p><img src="review2.jpg" alt="Kunde 2" width="100"> Sehr zufrieden!</p>
-        <p><img src="review3.jpg" alt="Kunde 3" width="100"> Empfehlenswert!</p>
-    </div>
-    <script>
-        function toggleServices() {
-            var services = document.getElementById("services");
-            services.style.display = services.style.display === "none" ? "block" : "none";
-        }
-    </script>
+    <p>Willkommen auf unserer Webseite! Entdecken Sie unsere Wellness- und Massageangebote.</p>
 </body>
 </html>
