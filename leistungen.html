@@ -6,55 +6,67 @@
     <title>Leistungen | Wellness & Massage</title>
     <style>
         body {
-            background-color: #000000;
-            color: #D4AF37; /* золотой */
+            background-color: #000000; /* Черный фон */
+            color: #D4AF37; /* Золотой цвет текста */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #000000;
-            padding: 20px;
+            background-color: #000000; 
+            color: #D4AF37;
             text-align: center;
-            font-size: 24px;
+            padding: 20px;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
         h1, h2 {
-            color: #D4AF37;
+            color: #D4AF37; /* Золотой */
             font-size: 36px;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
         .service-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
             padding: 20px;
             list-style-type: none;
             margin: 0;
         }
 
         .service-item {
-            background-color: #333333;
-            margin: 15px 0;
-            padding: 15px;
+            background-color: #1a1a1a; /* Темно-серый фон для каждого элемента */
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
         }
 
         .service-item h3 {
-            color: #D4AF37;
+            color: #D4AF37; /* Золотой */
             font-size: 28px;
+            margin-bottom: 10px;
         }
 
         .service-item p {
-            color: #C0C0C0; /* серебристый */
+            color: #C0C0C0; /* Серебристый для описаний */
             font-size: 18px;
         }
 
         footer {
             background-color: #000000;
+            color: #C0C0C0; /* Серебристый цвет */
             text-align: center;
             padding: 20px;
             font-size: 14px;
-            color: #C0C0C0;
         }
 
         a {
