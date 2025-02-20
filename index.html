@@ -5,8 +5,8 @@
     <title>Wellness & Massage</title>
     <style>
         body {
-            background-color: #000000; /* Черный фон */
-            color: #D4AF37; /* Золотой текст */
+            background-color: #000000;
+            color: #D4AF37;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
@@ -48,8 +48,16 @@
             <option value="fr">Français</option>
         </select>
     </div><div class="content">
-    <h1 id="title">Willkommen bei Wellness & Massage</h1>
-    <p id="description">Erleben Sie professionelle Massagen und Schönheitsbehandlungen.</p>
+    <h1 id="title">Wellness & Massage</h1>
+    <p id="description">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+    <h2 id="services-title">Unsere Leistungen</h2>
+    <ul id="services">
+        <li>Massage</li>
+        <li>Maniküre</li>
+        <li>Pediküre</li>
+        <li>Waxing</li>
+        <li>Laser-Haarentfernung</li>
+    </ul>
 </div>
 
 <div class="arrow" onclick="scrollDown()">&#x25BC;</div>
@@ -57,24 +65,34 @@
 <script>
     const translations = {
         de: {
-            title: "Willkommen bei Wellness & Massage",
-            description: "Erleben Sie professionelle Massagen und Schönheitsbehandlungen."
+            title: "Wellness & Massage",
+            description: "Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.",
+            servicesTitle: "Unsere Leistungen",
+            services: ["Massage", "Maniküre", "Pediküre", "Waxing", "Laser-Haarentfernung"]
         },
         ru: {
-            title: "Добро пожаловать в Wellness & Massage",
-            description: "Испытайте профессиональные массажи и косметические процедуры."
+            title: "Wellness & Massage",
+            description: "Профессиональные массажи, маникюр, педикюр, ваксинг и лазерная эпиляция.",
+            servicesTitle: "Наши услуги",
+            services: ["Массаж", "Маникюр", "Педикюр", "Ваксинг", "Лазерная эпиляция"]
         },
         en: {
-            title: "Welcome to Wellness & Massage",
-            description: "Experience professional massages and beauty treatments."
+            title: "Wellness & Massage",
+            description: "Professional massages, manicure, pedicure, waxing, and laser hair removal.",
+            servicesTitle: "Our Services",
+            services: ["Massage", "Manicure", "Pedicure", "Waxing", "Laser Hair Removal"]
         },
         it: {
-            title: "Benvenuti a Wellness & Massage",
-            description: "Scopri massaggi professionali e trattamenti di bellezza."
+            title: "Wellness & Massage",
+            description: "Massaggi professionali, manicure, pedicure, ceretta e depilazione laser.",
+            servicesTitle: "I nostri servizi",
+            services: ["Massaggio", "Manicure", "Pedicure", "Ceretta", "Depilazione laser"]
         },
         fr: {
-            title: "Bienvenue chez Wellness & Massage",
-            description: "Découvrez des massages professionnels et des soins de beauté."
+            title: "Wellness & Massage",
+            description: "Massages professionnels, manucure, pédicure, épilation à la cire et au laser.",
+            servicesTitle: "Nos services",
+            services: ["Massage", "Manucure", "Pédicure", "Épilation à la cire", "Épilation au laser"]
         }
     };
     
@@ -82,6 +100,14 @@
         let lang = document.getElementById("language").value;
         document.getElementById("title").textContent = translations[lang].title;
         document.getElementById("description").textContent = translations[lang].description;
+        document.getElementById("services-title").textContent = translations[lang].servicesTitle;
+        let servicesList = document.getElementById("services");
+        servicesList.innerHTML = "";
+        translations[lang].services.forEach(service => {
+            let li = document.createElement("li");
+            li.textContent = service;
+            servicesList.appendChild(li);
+        });
     }
     
     function scrollDown() {
