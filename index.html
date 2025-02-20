@@ -1,75 +1,100 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt | Wellness & Massage</title>
+    <title>Wellness & Massage</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-color: #000000; /* Черный фон */
-            color: #D4AF37; /* Золотой цвет текста */
+            background-color: #000;
+            color: #D4AF37;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
-
         header {
-            background-color: #000000;
-            color: #D4AF37;
-            text-align: center;
             padding: 20px;
-            font-size: 36px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-
-        h1 {
-            color: #D4AF37; /* Золотой */
-            font-size: 36px;
-            text-align: center;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        .contact-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
-
-        .contact-info {
-            text-align: center;
-            margin-top: 20px;
+        .contact-buttons a {
+            color: #D4AF37;
+            margin: 0 10px;
+            text-decoration: none;
             font-size: 18px;
         }
-
-        .map-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+        .reviews, .map {
+            margin: 40px 0;
         }
-
-        .map {
-            width: 80%;
-            height: 400px;
-            border: none;
-            border-radius: 10px;
+        .reviews img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Wellness & Massage</h1>
+        <div class="contact-buttons">
+            <a href="tel:+41798615388">📞 Telefon</a>
+            <a href="https://wa.me/41798615388">💬 WhatsApp</a>
+        </div>
+    </header><section id="intro">
+    <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+</section>
 
-<header>
-    <!-- Убрана лишняя надпись -->
-</header>
+<section id="services">
+    <h2>Unsere Leistungen</h2>
+    <ul>
+        <li>Massage</li>
+        <li>Maniküre</li>
+        <li>Pediküre</li>
+        <li>Waxing</li>
+        <li>Laser-Haarentfernung</li>
+    </ul>
+</section>
 
-<main>
-    <h1>Kontakt</h1>
-
-    <div class="contact-info">
-        <p>Adresse: Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
-        <p>Telefon: <a href="tel:+41798615388">+41 79 861 53 88</a></p>
-        <p>WhatsApp: <a href="https://wa.me/+41798615388">Klicken Sie hier, um mir eine Nachricht zu senden</a></p>
+<section class="reviews">
+    <h2>Kundenbewertungen</h2>
+    <div>
+        <img src="review1.jpg" alt="Kundenfoto 1">
+        <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
     </div>
-
-    <div class="map-container">
-        <!-- Вставьте свой ключ API вместо "YOUR_API_KEY" -->
-        <iframe class="map" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Löwengartenstrasse+12,+9400+Rorschach,+Schweiz" allowfullscreen></iframe>
+    <div>
+        <img src="review2.jpg" alt="Kundenfoto 2">
+        <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
     </div>
+    <div>
+        <img src="review3.jpg" alt="Kundenfoto 3">
+        <p>„Sehr professioneller Service.“ - Mark S.</p>
+    </div>
+    <div>
+        <img src="review4.jpg" alt="Kundenfoto 4">
+        <p>„Ich bin sehr zufrieden mit der Behandlung!“ - Sophie L.</p>
+    </div>
+    <div>
+        <img src="review5.jpg" alt="Kundenfoto 5">
+        <p>„Freundliches Personal und tolle Atmosphäre.“ - David B.</p>
+    </div>
+</section>
 
-</main>
+<section class="map">
+    <h2>Unser Standort</h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" 
+        width="80%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</section>
 
 </body>
 </html>
