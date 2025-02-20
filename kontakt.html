@@ -1,39 +1,95 @@
-<!DOCTYPE html><html lang="de">
+<!DOCTYPE html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
+    <title>Kontakt | Wellness & Massage</title>
     <style>
         body {
-            background-color: black;
-            color: silver;
+            background-color: #000000; /* Черный фон */
+            color: #D4AF37; /* Золотой цвет текста */
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000;
+            color: #D4AF37;
             text-align: center;
             padding: 20px;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
+
         h1 {
-            color: gold;
+            color: #D4AF37; /* Золотой */
+            font-size: 36px;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-        .content {
-            max-width: 800px;
-            margin: auto;
-        }
-        iframe {
-            width: 100%;
-            height: 400px;
-            border: 0;
+
+        .contact-info {
+            text-align: center;
             margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .map-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .map {
+            width: 80%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #C0C0C0; /* Серебристый цвет */
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
+<header>
+    Wellness & Massage - Kontakt
+</header>
+
+<main>
     <h1>Kontakt</h1>
-    <div class="content">
-        <p><strong>Adresse:</strong> Löwengartenstrasse 12, 9400 Rorschach</p>
-        <p><strong>Telefon / WhatsApp:</strong> +41 79 861 53 88</p>
-        <p><strong>E-Mail:</strong> info@wellness-massage.ch</p><h2>Standort</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.546988227344!2d9.4937!3d47.4783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDI4JzQyLjEiTiA5wrAzMCcxMS4wIkU!5e0!3m2!1sen!2sch!4v1700000000000" allowfullscreen></iframe>
-</div>
+
+    <div class="contact-info">
+        <p>Adresse: Löwengartenstrasse 12, 9400 Rorschach</p>
+        <p>Telefon: <a href="tel:+41798615388">+41 79 861 53 88</a></p>
+        <p>WhatsApp: <a href="https://wa.me/+41798615388">Klicken Sie hier, um mir eine Nachricht zu senden</a></p>
+    </div>
+
+    <div class="map-container">
+        <iframe class="map" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Löwengartenstrasse+12,+9400+Rorschach" allowfullscreen></iframe>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Wellness & Massage - Alle Rechte vorbehalten. | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+</footer>
 
 </body>
 </html>
