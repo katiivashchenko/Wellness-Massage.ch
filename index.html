@@ -1,171 +1,88 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness&Massage</title>
+    <title>Wellness & Massage</title>
     <style>
         body {
-            background-color: black;
-            color: silver;
+            background-color: #000000; /* Черный фон */
+            color: #D4AF37; /* Золотой текст */
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
         }
-        a {
-            text-decoration: none;
-            color: silver;
-        }
-        .shimmer {
-            color: gold;
-            font-size: 18px;
-            font-weight: bold;
-            animation: shimmer 2s infinite;
-        }
-        @keyframes shimmer {
-            0% { text-shadow: 0 0 5px gold, 0 0 10px gold; }
-            100% { text-shadow: 0 0 5px gold, 0 0 10px gold; }
-        }
-        .header-buttons {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 10;
-        }
-        .header-buttons a {
-            margin-left: 10px;
-            padding: 8px 12px;
-            border: 1px solid silver;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .header-buttons a:hover {
-            color: gold;
-            border-color: gold;
-        }
-        .container {
-            padding: 20px;
-            margin-top: 70px;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-        .main-menu {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        .main-menu a {
-            padding: 10px;
-            border: 1px solid silver;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .main-menu a:hover {
-            color: gold;
-            border-color: gold;
-        }
-        .logo {
+        .language-selector {
             position: absolute;
             top: 10px;
-            left: 15px;
+            right: 10px;
         }
-        .reviews {
-            margin-top: 40px;
+        select {
+            background: #D4AF37;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
         }
-        .review {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .review img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 15px;
-            border: 2px solid gold;
-        }
-        .map-container {
-            margin-top: 40px;
-            text-align: center;
-        }
-        .map-container iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 400px;
-            border: 2px solid gold;
-        }
-        @media (max-width: 768px) {
-            .main-menu {
-                flex-direction: column;
-                align-items: center;
-            }
-            .review {
-                flex-direction: column;
-                text-align: center;
-            }
-            .review img {
-                margin-bottom: 10px;
-            }
-            .map-container iframe {
-                height: 300px;
-            }
+        .arrow {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            color: #D4AF37;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <div class="language-selector">
+        <label for="language">🌍 </label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="de">Deutsch</option>
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Français</option>
+        </select>
+    </div><h1 id="title">Willkommen bei Wellness & Massage</h1>
+<p id="description">Erleben Sie professionelle Massagen und Schönheitsbehandlungen.</p>
 
-    <div class="header-buttons">
-        <a href="tel:+41798615388">📞 Call</a>
-        <a href="https://wa.me/41798615388">💬 WhatsApp</a>
-    </div>
+<div class="arrow" onclick="scrollDown()">&#x25BC;</div>
 
-    <div class="logo">
-        <h1 class="shimmer">Wellness&Massage</h1>
-    </div>
-
-    <div class="container">
-        <div class="main-menu">
-            <a href="leistungen.html" target="_blank">Leistungen</a>
-            <a href="preisliste.html" target="_blank">Preisliste</a>
-            <a href="kontakt.html" target="_blank">Kontakt</a>
-            <a href="datenschutz.html" target="_blank">Datenschutz</a>
-            <a href="impressum.html" target="_blank">Impressum</a>
-        </div>
-
-        <h2>Warum sollten Sie uns wählen?</h2>
-        <p>Wir bieten hochwertige Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung in Rorschach.</p>
-
-        <h2>Kundenbewertungen</h2>
-        <div class="reviews">
-            <div class="review">
-                <img src="review1.jpg" alt="Kundenbewertung 1">
-                <p>„Die beste Massage, die ich je hatte! Sehr professionell und entspannend.“ - Lisa M.</p>
-            </div>
-            <div class="review">
-                <img src="review2.jpg" alt="Kundenbewertung 2">
-                <p>„Meine Nägel sehen perfekt aus! Danke für die tolle Maniküre.“ - Sandra K.</p>
-            </div>
-            <div class="review">
-                <img src="review3.jpg" alt="Kundenbewertung 3">
-                <p>„Schnelle und schmerzfreie Haarentfernung. Sehr zufrieden mit dem Ergebnis.“ - Michael S.</p>
-            </div>
-        </div>
-
-        <div class="map-container">
-            <h2>Hier finden Sie uns</h2>
-            <p><strong>Adresse:</strong> Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.6651072833086!2d9.48563277610899!3d47.47888547114782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ad763f3a67ad5%3A0x2c81c6cb2192566!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2s!4v1700000000000!5m2!1sde!2s"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </div>
+<script>
+    const translations = {
+        de: {
+            title: "Willkommen bei Wellness & Massage",
+            description: "Erleben Sie professionelle Massagen und Schönheitsbehandlungen."
+        },
+        ru: {
+            title: "Добро пожаловать в Wellness & Massage",
+            description: "Испытайте профессиональные массажи и косметические процедуры."
+        },
+        en: {
+            title: "Welcome to Wellness & Massage",
+            description: "Experience professional massages and beauty treatments."
+        },
+        it: {
+            title: "Benvenuti a Wellness & Massage",
+            description: "Scopri massaggi professionali e trattamenti di bellezza."
+        },
+        fr: {
+            title: "Bienvenue chez Wellness & Massage",
+            description: "Découvrez des massages professionnels et des soins de beauté."
+        }
+    };
+    
+    function changeLanguage() {
+        let lang = document.getElementById("language").value;
+        document.getElementById("title").textContent = translations[lang].title;
+        document.getElementById("description").textContent = translations[lang].description;
+    }
+    
+    function scrollDown() {
+        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    }
+</script>
 
 </body>
 </html>
