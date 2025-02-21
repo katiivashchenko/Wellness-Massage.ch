@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,21 +15,30 @@
             color: gold;
         }
         .content {
-            max-width: 800px;
+            max-width: 600px;
             margin: auto;
             text-align: left;
         }
         .category {
-            font-size: 1.2em;
+            font-size: 1.3em;
             color: gold;
             margin-top: 20px;
+            font-weight: bold;
+            border-bottom: 2px solid gold;
+            padding-bottom: 5px;
         }
         .price-list {
             list-style: none;
             padding: 0;
         }
         .price-list li {
-            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            font-size: 1.1em;
+        }
+        .price {
+            font-weight: bold;
         }
         footer {
             margin-top: 40px;
@@ -48,31 +56,30 @@
     <div class="content">
         <div class="category">Massage</div>
         <ul class="price-list">
-            <li>1 Stunde – 100 CHF</li>
-            <li>1,5 Stunden – 140 CHF</li>
-            <li>2 Stunden – 180 CHF</li>
-            <li>Bein-Fußmassage (30 min) – 50 CHF</li>
-            <li>Rücken-Schulter-Nacken-Massage (40-45 min) – 75 CHF</li>
-            <li>Gesichtsmassage (20 min) – 30 CHF</li>
-            <li>Anti-Cellulite Behandlung – 70 CHF</li>
+            <li><span>1 Stunde</span> <span class="price">100 CHF</span></li>
+            <li><span>1,5 Stunden</span> <span class="price">140 CHF</span></li>
+            <li><span>2 Stunden</span> <span class="price">180 CHF</span></li>
+            <li><span>Bein-Fußmassage (30 min)</span> <span class="price">50 CHF</span></li>
+            <li><span>Rücken-Schulter-Nacken-Massage (40-45 min)</span> <span class="price">75 CHF</span></li>
+            <li><span>Gesichtsmassage (20 min)</span> <span class="price">30 CHF</span></li>
+            <li><span>Anti-Cellulite Behandlung</span> <span class="price">70 CHF</span></li>
         </ul>
         <div class="category">Haarentfernung mit Laser oder Waxing</div>
         <ul class="price-list">
-            <li>Beine von hinten und vorne – 60 CHF</li>
-            <li>Achseln – 20 CHF</li>
-            <li>Bauch und Brust – 50 CHF</li>
-            <li>Rücken – 50 CHF</li>
-            <li>Schultern und Arme – 50 CHF</li>
-            <li>Po – 30 CHF</li>
-            <li>Gesicht – 20 CHF</li>
+            <li><span>Beine von hinten und vorne</span> <span class="price">60 CHF</span></li>
+            <li><span>Achseln</span> <span class="price">20 CHF</span></li>
+            <li><span>Bauch und Brust</span> <span class="price">50 CHF</span></li>
+            <li><span>Rücken</span> <span class="price">50 CHF</span></li>
+            <li><span>Schultern und Arme</span> <span class="price">50 CHF</span></li>
+            <li><span>Po</span> <span class="price">30 CHF</span></li>
+            <li><span>Gesicht</span> <span class="price">20 CHF</span></li>
         </ul>
         <div class="category">Maniküre & Pediküre</div>
         <ul class="price-list">
-            <li>Maniküre ab – 35 CHF</li>
-            <li>Pediküre ab – 50 CHF</li>
+            <li><span>Maniküre ab</span> <span class="price">35 CHF</span></li>
+            <li><span>Pediküre ab</span> <span class="price">50 CHF</span></li>
         </ul>
     </div>
-
     <footer>
         <a href="index.html">Zurück zur Startseite</a>
     </footer>
