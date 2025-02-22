@@ -3,16 +3,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness & Massage</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: gold;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .animated-text {
+            font-size: 1.5em;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        .review img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .map iframe {
+            width: 80%;
+            height: 300px;
+            border: 0;
+        }
+        .hours {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Wellness & Massage</h1>
-        <div class="contact-buttons">
-            <button onclick="window.location.href='tel:+41798615388'">📞 Anrufen</button>
-            <a href="https://wa.me/41798615388" class="whatsapp-button">💬 WhatsApp</a>
-        </div>
-    </header><section id="intro">
+    <h1>Wellness & Massage</h1>
+    <p>📞 Anrufen <a href="https://wa.me/41798615388">💬 WhatsApp</a></p><section id="intro">
     <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
 </section>
 
@@ -52,12 +78,6 @@
     </div>
 </section>
 
-<section class="opening-hours">
-    <h2 class="animated-text">Öffnungszeiten</h2>
-    <p>Mo - Sa: 9:00 - 19:00 Uhr</p>
-    <p>So: Frei</p>
-</section>
-
 <section class="map">
     <h2 class="animated-text">Unser Standort</h2>
     <p>
@@ -65,14 +85,13 @@
             Löwengartenstrasse 12, 9400 Rorschach, Schweiz
         </a>
     </p>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" 
-        width="80%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" loading="lazy"></iframe>
+</section>
+
+<section class="hours">
+    <h2 class="animated-text">Öffnungszeiten</h2>
+    <p>Mo - Sa: 09:00 - 19:00</p>
+    <p>So: Frei</p>
 </section>
 
 <footer>
