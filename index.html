@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-color: #000; /* Черный фон */
-            color: #D4AF37; /* Золотой текст */
+            background-color: #000;
+            color: #D4AF37;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -80,6 +80,25 @@
             display: block;
             margin: 0 auto;
         }
+        .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 200px;
+            margin: 20px auto;
+        }
+        .back-to-home a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .back-to-home a:hover {
+            color: #D4AF37;
+        }
         @media (max-width: 768px) {
             .contact-buttons {
                 position: static;
@@ -150,5 +169,8 @@
         <a href="impressum.html" target="_blank">Impressum</a> | 
         <a href="datenschutz.html" target="_blank">Datenschutz</a>
     </footer>
+    <div class="back-to-home">
+        <a href="index.html">Zurück zur Startseite</a>
+    </div>
 </body>
 </html>
