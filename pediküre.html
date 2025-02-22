@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,16 +14,71 @@
         h1 {
             color: gold;
         }
+        .contact-buttons {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .contact-buttons a {
+            background-color: silver;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .contact-buttons a:hover {
+            background-color: gold;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: black;
+            background-color: silver;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .back-button:hover {
+            background-color: gold;
+        }
     </style>
 </head>
 <body>
-    <h1>Pediküre</h1>
-    <p>Erleben Sie eine entspannende Pediküre für gesunde und schöne Füße.</p>
+    <div class="contact-buttons">
+        <a href="tel:+41798615388">📞 Telefon</a>
+        <a href="https://wa.me/41798615388">💬 WhatsApp</a>
+    </div><h1>Pediküre</h1>
+<p>Erleben Sie eine entspannende Pediküre für gesunde und schöne Füße.</p>
+
+<div class="gallery">
     <img src="pediküre1.jpg" alt="Pediküre Bild 1">
     <img src="pediküre2.jpg" alt="Pediküre Bild 2">
     <img src="pediküre3.jpg" alt="Pediküre Bild 3">
-    <footer>
-        <a href="index.html" style="color: silver;">Zurück zur Startseite</a>
-    </footer>
+</div>
+
+<footer>
+    <a href="index.html" class="back-button">Zurück zur Startseite</a>
+</footer>
+
 </body>
 </html>
