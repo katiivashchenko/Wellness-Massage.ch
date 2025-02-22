@@ -4,249 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness & Massage</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" defer></script>
-    <style>
-        body {
-            background-color: #000;
-            color: #D4AF37;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        header {
-            padding: 20px;
-            position: relative;
-        }
-        .contact-buttons {
-            display: flex;
-            gap: 10px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .contact-buttons a {
-            color: #C0C0C0;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .contact-buttons a:hover {
-            background-color: #555;
-        }
-        .language-selector {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #333;
-            padding: 5px;
-            border-radius: 5px;
-        }
-        .language-selector select {
-            background-color: #333;
-            color: #C0C0C0;
-            border: none;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 3px;
-        }
-        .language-selector select:hover {
-            background-color: #555;
-        }
-        section {
-            margin-top: 50px;
-        }
-        .reviews {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .review {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            max-width: 600px;
-            text-align: left;
-        }
-        .review img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #111;
-        }
-        footer a, #services a {
-            color: #C0C0C0;
-            text-decoration: none;
-        }
-        #services ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        #services li {
-            margin: 10px 0;
-        }
-        .map iframe {
-            max-width: 500px;
-            width: 90%;
-            display: block;
-            margin: 0 auto;
-        }
-        .back-to-home {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            width: 200px;
-            margin: 20px auto;
-        }
-        .back-to-home a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .back-to-home a:hover {
-            color: #D4AF37;
-        }
-        @media (max-width: 768px) {
-            .contact-buttons {
-                position: static;
-                justify-content: center;
-                margin-top: 10px;
-            }
-            .contact-buttons a {
-                font-size: 16px;
-                padding: 8px;
-            }
-            .map iframe {
-                max-width: 100%;
-                height: 250px;
-            }
-        }
-        .animated-text {
-            animation: fadeInUp 2s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 class="animated-text" id="title">Wellness & Massage</h1>
-        <div class="contact-buttons">
-            <a href="tel:+41798615388" id="call">📞 Anrufen</a>
-            <a href="https://wa.me/41798615388" id="whatsapp">💬 WhatsApp</a>
-        </div>
-        <div class="language-selector">
-            <label for="language" style="display: none;">Sprache wählen:</label>
-            <select id="language" name="language">
-                <option value="de">Deutsch</option>
-                <option value="en">English</option>
-                <option value="it">Italiano</option>
-                <option value="fr">Français</option>
-                <option value="ru">Русский</option>
-            </select>
-        </div>
-    </header>
+    <!-- Language Selector -->
+    <select id="language">
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="it">Italiano</option>
+        <option value="fr">Français</option>
+        <option value="ru">Русский</option>
+    </select>
 
-    <section id="intro">
-        <p id="intro">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
-    </section>
+    <h1 data-lang="title">Wellness & Massage</h1>
+    <p data-lang="intro">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
 
-    <section id="services">
-        <h2 id="services-title">Unsere Leistungen</h2>
-        <ul>
-            <li><a href="massage.html" target="_blank" id="massage">Massage</a></li>
-            <li><a href="maniküre.html" target="_blank" id="manicure">Maniküre</a></li>
-            <li><a href="pediküre.html" target="_blank" id="pedicure">Pediküre</a></li>
-            <li><a href="waxing.html" target="_blank" id="waxing">Waxing</a></li>
-            <li><a href="laser-haarentfernung.html" target="_blank" id="laser-hair-removal">Laser-Haarentfernung</a></li>
-            <li><a href="preisliste.html" target="_blank" class="preisliste" id="price-list">Preisliste</a></li>
-        </ul>
-    </section>
+    <h2 data-lang="services">Unsere Leistungen</h2>
+    <ul>
+        <li><a href="#massage" data-lang="massage">Massage</a></li>
+        <li><a href="#manicure" data-lang="manicure">Maniküre</a></li>
+        <li><a href="#pedicure" data-lang="pedicure">Pediküre</a></li>
+        <li><a href="#waxing" data-lang="waxing">Waxing</a></li>
+        <li><a href="#laser" data-lang="laser">Laser-Haarentfernung</a></li>
+    </ul>
 
-    <section class="reviews">
-        <h2 id="reviews-title">Kundenbewertungen</h2>
-        <div class="review">
-            <img src="images/client1.jpg" alt="Kundenfoto 1">
-            <p id="review1">„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
-        </div>
-        <div class="review">
-            <img src="images/client2.jpg" alt="Kundenfoto 2">
-            <p id="review2">„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
-        </div>
-        <div class="review">
-            <img src="images/client3.jpg" alt="Kundenfoto 3">
-            <p id="review3">„Sehr professioneller Service.“ - Mark S.</p>
-        </div>
-        <div class="review">
-            <img src="images/client4.jpg" alt="Kundenfoto 4">
-            <p id="review4">„Sehr entspannende Atmosphäre, ich komme gerne wieder!“ - Julia W.</p>
-        </div>
-        <div class="review">
-            <img src="images/client5.jpg" alt="Kundenfoto 5">
-            <p id="review5">„Die beste Maniküre, die ich je hatte!“ - Sophie T.</p>
-        </div>
-    </section>
+    <h2 data-lang="reviews">Kundenbewertungen</h2>
+    <blockquote>
+        <p data-lang="review1">„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+    </blockquote>
+    <blockquote>
+        <p data-lang="review2">„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+    </blockquote>
 
-    <section class="map">
-        <h2 id="location-title">Unser Standort</h2>
-        <p id="location">Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=...1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" 
-            width="80%" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-    </section>
+    <h2 data-lang="location">Unser Standort</h2>
+    <a href="https://www.google.com/maps?q=Löwengartenstrasse+12,+9400+Rorschach,+Schweiz" target="_blank" data-lang="address">
+        Löwengartenstrasse 12, 9400 Rorschach, Schweiz
+    </a>
 
-    <footer>
-        <a href="impressum.html" target="_blank" id="imprint">Impressum</a> | 
-        <a href="datenschutz.html" target="_blank" id="privacy-policy">Datenschutz</a>
-    </footer>
+    <h3 data-lang="impressum">Impressum</h3>
+    <h3 data-lang="datenschutz">Datenschutz</h3>
 
     <script>
-        const translations = {
-            en: {
-                title: "Wellness & Massage",
-                intro: "Professional massages, manicures, pedicures, waxing, and laser hair removal.",
-                servicesTitle: "Our Services",
-                massage: "Massage",
-                manicure: "Manicure",
-                pedicure: "Pedicure",
-                waxing: "Waxing",
-                laserHairRemoval: "Laser Hair Removal",
-                priceList: "Price List",
-                reviewsTitle: "Customer Reviews",
-                review1: "“Great massage, very relaxing!” - Lisa M.",
-                review2: "“Manicure and pedicure perfectly done!” - Anna K.",
-                review3: "“Very professional service.” - Mark S.",
-                review4: "“Very relaxing atmosphere, I’ll come back!” - Julia W.",
-                review5: "“The best manicure I’ve ever had!” - Sophie T.",
-                locationTitle: "Our Location",
-                location: "Löwengartenstrasse 12, 9400 Rorschach, Switzerland",
-                imprint: "Imprint",
-                privacyPolicy:
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageSelector = document.getElementById('language');
+            languageSelector.addEventListener('change', changeLanguage);
+
+            function changeLanguage() {
+                const selectedLanguage = languageSelector.value;
+                const textElements = document.querySelectorAll('[data-lang]');
+
+                textElements.forEach(element => {
+                    const langKey = element.getAttribute('data-lang');
+                    element.textContent = translations[selectedLanguage][langKey];
+                });
+            }
+
+            const translations = {
+                de: {
+                    title: 'Wellness & Massage',
+                    intro: 'Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.',
+                    services: 'Unsere Leistungen',
+                    review1: '„Tolle Massage, sehr entspannend!“ - Lisa M.',
+                    review2: '„Maniküre und Pediküre perfekt gemacht!“ - Anna K.',
+                    location: 'Unser Standort',
+                    address: 'Löwengartenstrasse 12, 9400 Rorschach, Schweiz',
+                    impressum: 'Impressum',
+                    datenschutz: 'Datenschutz'
+                },
+                en: {
+                    title: 'Wellness & Massage',
+                    intro: 'Professional massages, manicures, pedicures, waxing, and laser hair removal.',
+                    services: 'Our Services',
+                    review1: '“Great massage, very relaxing!” - Lisa M.',
+                    review2: '“Manicure and pedicure perfectly done!” - Anna K.',
+                    location: 'Our Location',
+                    address: 'Löwengartenstrasse 12, 9400 Rorschach, Switzerland',
+                    impressum: 'Impressum',
+                    datenschutz: 'Privacy Policy'
+                },
+                // Add translations for other languages (it, fr, ru) here...
+            };
+        });
+    </script>
+</body>
+</html>
