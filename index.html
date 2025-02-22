@@ -13,6 +13,10 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            background-image: url('background.jpg'); /* Фоновое изображение */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         header {
             padding: 20px;
@@ -39,6 +43,28 @@
         }
         .contact-buttons a:hover {
             background-color: #555;
+        }
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #333;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        .language-selector select {
+            background-color: #333;
+            color: #C0C0C0;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px;
+        }
+        .language-selector select:hover {
+            background-color: #555;
+        }
+        section {
+            margin-top: 50px;
         }
         .reviews {
             display: flex;
@@ -122,6 +148,16 @@
         <div class="contact-buttons">
             <a href="tel:+41798615388">📞 Anrufen</a>
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
+        </div>
+        <div class="language-selector">
+            <label for="language">Sprache wählen:</label>
+            <select id="language" name="language">
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+                <option value="it">Italiano</option>
+                <option value="fr">Français</option>
+                <option value="ru">Русский</option>
+            </select>
         </div>
     </header>
     <section id="intro">
