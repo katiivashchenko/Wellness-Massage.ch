@@ -1,99 +1,12 @@
-<!DOCTYPE html><html lang="de"><head>
+<!DOCTYPE html>
+<html lang="de">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wellness & Massage - Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung in Rorschach.">
+    <meta name="author" content="Wellness & Massage">
     <title>Wellness & Massage</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-color: #000;
-            color: #D4AF37;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            padding: 20px;
-            position: relative;
-        }
-        .contact-buttons {
-            display: flex;
-            gap: 10px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .contact-buttons a {
-            color: #C0C0C0;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .contact-buttons a:hover {
-            background-color: #555;
-        }
-        .reviews {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .review {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            max-width: 600px;
-            text-align: left;
-        }
-        .review img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #111;
-        }
-        footer a, #services a {
-            color: #C0C0C0;
-            text-decoration: none;
-        }
-        #services ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        #services li {
-            margin: 10px 0;
-        }
-        .map iframe {
-            max-width: 500px;
-            width: 90%;
-            display: block;
-            margin: 0 auto;
-        }
-        @media (max-width: 768px) {
-            .contact-buttons {
-                position: static;
-                justify-content: center;
-                margin-top: 10px;
-            }
-            .contact-buttons a {
-                font-size: 16px;
-                padding: 8px;
-            }
-            .map iframe {
-                max-width: 100%;
-                height: 250px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение внешнего CSS -->
 </head>
 <body>
     <header>
@@ -103,9 +16,11 @@
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
         </div>
     </header>
+    
     <section id="intro">
         <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
+    
     <section id="services">
         <h2>Unsere Leistungen</h2>
         <ul>
@@ -117,6 +32,7 @@
             <li><a href="preisliste.html" target="_blank" class="preisliste">Preisliste</a></li>
         </ul>
     </section>
+    
     <section class="reviews">
         <h2>Kundenbewertungen</h2>
         <div class="review">
@@ -132,6 +48,7 @@
             <p>„Sehr professioneller Service.“ - Mark S.</p>
         </div>
     </section>
+    
     <section class="map">
         <h2>Unser Standort</h2>
         <p>Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
@@ -144,9 +61,15 @@
             loading="lazy">
         </iframe>
     </section>
+    
     <footer>
-        <a href="impressum.html" target="_blank">Impressum</a> | 
-        <a href="datenschutz.html" target="_blank">Datenschutz</a>
+        <nav>
+            <a href="impressum.html" target="_blank">Impressum</a> | 
+            <a href="datenschutz.html" target="_blank">Datenschutz</a>
+        </nav>
     </footer>
+    
+    <!-- Подключение внешнего JavaScript файла -->
+    <script src="script.js"></script>
 </body>
 </html>
