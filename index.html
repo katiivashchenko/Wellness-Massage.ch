@@ -4,95 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness & Massage</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" defer></script>
-    <style>
-        body {
-            background-color: #000;
-            color: #D4AF37;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        header {
-            padding: 20px;
-            position: relative;
-            z-index: 10;
-        }
-        .contact-buttons {
-            display: flex;
-            gap: 10px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .contact-buttons a {
-            color: #C0C0C0;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .contact-buttons a:hover {
-            background-color: #555;
-        }
-        section {
-            margin-top: 80px;
-        }
-        .map iframe {
-            max-width: 500px;
-            width: 90%;
-            display: block;
-            margin: 0 auto;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #111;
-        }
-        footer a {
-            color: #C0C0C0;
-            text-decoration: none;
-        }
-        @media (max-width: 768px) {
-            .contact-buttons {
-                position: static;
-                justify-content: center;
-                margin-top: 10px;
-            }
-            .contact-buttons a {
-                font-size: 16px;
-                padding: 8px;
-            }
-            .map iframe {
-                max-width: 100%;
-                height: 250px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Wellness & Massage</h1>
         <div class="contact-buttons">
-            <a href="tel:+41798615388">📞 Anrufen</a>
-            <a href="https://wa.me/41798615388">💬 WhatsApp</a>
+            <button onclick="window.location.href='tel:+41798615388'">📞 Anrufen</button>
+            <a href="https://wa.me/41798615388" class="whatsapp-button">💬 WhatsApp</a>
         </div>
     </header><section id="intro">
-    <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+    <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
 </section>
 
 <section id="services">
-    <h2>Unsere Leistungen</h2>
+    <h2 class="animated-text">Unsere Leistungen</h2>
     <ul>
         <li><a href="massage.html" target="_blank">Massage</a></li>
         <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
@@ -103,28 +28,51 @@
     </ul>
 </section>
 
+<section class="reviews">
+    <h2 class="animated-text">Kundenbewertungen</h2>
+    <div class="review">
+        <img src="images/client1.jpg" alt="Kundenfoto 1">
+        <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+    </div>
+    <div class="review">
+        <img src="images/client2.jpg" alt="Kundenfoto 2">
+        <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+    </div>
+    <div class="review">
+        <img src="images/client3.jpg" alt="Kundenfoto 3">
+        <p>„Sehr professioneller Service.“ - Mark S.</p>
+    </div>
+    <div class="review">
+        <img src="images/client4.jpg" alt="Kundenfoto 4">
+        <p>„Sehr entspannende Atmosphäre, ich komme gerne wieder!“ - Julia W.</p>
+    </div>
+    <div class="review">
+        <img src="images/client5.jpg" alt="Kundenfoto 5">
+        <p>„Die beste Maniküre, die ich je hatte!“ - Sophie T.</p>
+    </div>
+</section>
+
+<section class="opening-hours">
+    <h2 class="animated-text">Öffnungszeiten</h2>
+    <p>Mo - Sa: 9:00 - 19:00 Uhr</p>
+    <p>So: Frei</p>
+</section>
+
 <section class="map">
-    <h2>Unser Standort</h2>
+    <h2 class="animated-text">Unser Standort</h2>
     <p>
-        <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" target="_blank">
+        <a href="https://www.google.com/maps?q=L%C3%B6wengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" target="_blank">
             Löwengartenstrasse 12, 9400 Rorschach, Schweiz
         </a>
     </p>
     <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000"
-        width="80%"
-        height="300"
-        style="border:0;"
-        allowfullscreen=""
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" 
+        width="80%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
         loading="lazy">
     </iframe>
-</section>
-
-<section id="opening-hours">
-    <h2>Unsere Öffnungszeiten</h2>
-    <p>Montag - Freitag: 09:00 - 19:00</p>
-    <p>Samstag: 10:00 - 17:00</p>
-    <p>Sonntag: Geschlossen</p>
 </section>
 
 <footer>
