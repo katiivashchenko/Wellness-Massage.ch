@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
+<!DOCTYPE html><html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,16 +14,41 @@
         h1 {
             color: gold;
         }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+        }
+        footer a {
+            color: silver;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <h1>Waxing</h1>
     <p>Sanfte Haarentfernung mit Wachs für langanhaltende Glätte.</p>
-    <img src="waxing1.jpg" alt="Waxing Bild 1">
-    <img src="waxing2.jpg" alt="Waxing Bild 2">
-    <img src="waxing3.jpg" alt="Waxing Bild 3">
+    <div class="gallery">
+        <img src="waxing1.jpg" alt="Waxing Bild 1">
+        <img src="waxing2.jpg" alt="Waxing Bild 2">
+        <img src="waxing3.jpg" alt="Waxing Bild 3">
+    </div>
     <footer>
-        <a href="index.html" style="color: silver;">Zurück zur Startseite</a>
+        <a href="index.html">Zurück zur Startseite</a>
     </footer>
 </body>
 </html>
