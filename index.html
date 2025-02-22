@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness & Massage</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
     <style>
         body {
             background-color: #000;
@@ -13,7 +14,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-image: url('background.jpg'); /* Фоновое изображение */
+            background-image: url('background.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -47,16 +48,16 @@
         .language-selector {
             position: absolute;
             top: 10px;
-            right: 10px; /* Перемещено в правую часть */
+            left: 10px;
             background-color: #333;
-            padding: 5px;
+            padding: 8px;
             border-radius: 5px;
         }
         .language-selector select {
             background-color: #333;
             color: #C0C0C0;
             border: none;
-            font-size: 14px; /* Уменьшено */
+            font-size: 16px;
             font-weight: bold;
             padding: 5px;
         }
@@ -140,7 +141,6 @@
                 height: 250px;
             }
         }
-        /* Стили для анимации */
         .animated-text {
             animation: fadeInUp 2s ease-out;
         }
@@ -149,20 +149,11 @@
             0% { opacity: 0; transform: translateY(50px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-        .testimonials p {
-            animation: fadeIn 5s infinite;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="animated-text">Wellness & Massage</h1>
+        <h1 class="animated-text" data-lang="title">Wellness & Massage</h1>
         <div class="contact-buttons">
             <a href="tel:+41798615388">📞 Anrufen</a>
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
@@ -180,11 +171,11 @@
     </header>
 
     <section id="intro">
-        <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+        <p data-lang="intro">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
 
     <section id="services">
-        <h2>Unsere Leistungen</h2>
+        <h2 data-lang="services">Unsere Leistungen</h2>
         <ul>
             <li><a href="massage.html" target="_blank">Massage</a></li>
             <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
@@ -196,34 +187,34 @@
     </section>
 
     <section class="reviews">
-        <h2>Kundenbewertungen</h2>
+        <h2 data-lang="reviews">Kundenbewertungen</h2>
         <div class="review">
             <img src="images/client1.jpg" alt="Kundenfoto 1">
-            <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+            <p data-lang="review1">„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
         </div>
         <div class="review">
             <img src="images/client2.jpg" alt="Kundenfoto 2">
-            <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+            <p data-lang="review2">„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
         </div>
         <div class="review">
             <img src="images/client3.jpg" alt="Kundenfoto 3">
-            <p>„Sehr professioneller Service.“ - Mark S.</p>
+            <p data-lang="review3">„Sehr professioneller Service.“ - Mark S.</p>
         </div>
         <div class="review">
             <img src="images/client4.jpg" alt="Kundenfoto 4">
-            <p>„Sehr entspannende Atmosphäre, ich komme gerne wieder!“ - Julia W.</p>
+            <p data-lang="review4">„Sehr entspannende Atmosphäre, ich komme gerne wieder!“ - Julia W.</p>
         </div>
         <div class="review">
             <img src="images/client5.jpg" alt="Kundenfoto 5">
-            <p>„Die beste Maniküre, die ich je hatte!“ - Sophie T.</p>
+            <p data-lang="review5">„Die beste Maniküre, die ich je hatte!“ - Sophie T.</p>
         </div>
     </section>
 
     <section class="map">
-        <h2>Unser Standort</h2>
+        <h2 data-lang="location">Unser Standort</h2>
         <p>Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" 
+            src="https://www.google.com/maps/embed?pb=..." 
             width="80%" 
             height="300" 
             style="border:0;" 
@@ -233,8 +224,8 @@
     </section>
 
     <footer>
-        <a href="impressum.html" target="_blank">Impressum</a> | 
-        <a href="datenschutz.html" target="_blank">Datenschutz</a>
+        <a href="impressum.html" target="_blank" data-lang="contact">Impressum</a> | 
+        <a href="datenschutz.html" target="_blank" data-lang="contact">Datenschutz</a>
     </footer>
 </body>
 </html>
