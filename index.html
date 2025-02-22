@@ -45,25 +45,6 @@
         .contact-buttons a:hover {
             background-color: #555;
         }
-        .language-selector {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #333;
-            padding: 5px;
-            border-radius: 5px;
-        }
-        .language-selector select {
-            background-color: #333;
-            color: #C0C0C0;
-            border: none;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 3px;
-        }
-        .language-selector select:hover {
-            background-color: #555;
-        }
         section {
             margin-top: 50px;
         }
@@ -158,16 +139,6 @@
             <a href="tel:+41798615388" id="call">📞 Anrufen</a>
             <a href="https://wa.me/41798615388" id="whatsapp">💬 WhatsApp</a>
         </div>
-        <div class="language-selector">
-            <label for="language" style="display: none;">Sprache wählen:</label>
-            <select id="language" name="language">
-                <option value="de">Deutsch</option>
-                <option value="en">English</option>
-                <option value="it">Italiano</option>
-                <option value="fr">Français</option>
-                <option value="ru">Русский</option>
-            </select>
-        </div>
     </header>
 
     <section id="intro">
@@ -231,49 +202,5 @@
         <a href="impressum.html" target="_blank" id="imprint">Impressum</a> | 
         <a href="datenschutz.html" target="_blank" id="privacy-policy">Datenschutz</a>
     </footer>
-
-    <script>
-        const translations = {
-            en: {
-                title: "Wellness & Massage",
-                intro: "Professional massages, manicures, pedicures, waxing, and laser hair removal.",
-                servicesTitle: "Our Services",
-                massage: "Massage",
-                manicure: "Manicure",
-                pedicure: "Pedicure",
-                waxing: "Waxing",
-                laserHairRemoval: "Laser Hair Removal",
-                priceList: "Price List",
-                reviewsTitle: "Customer Reviews",
-                review1: "“Great massage, very relaxing!” - Lisa M.",
-                review2: "“Manicure and pedicure perfectly done!” - Anna K.",
-                review3: "“Very professional service.” - Mark S.",
-                review4: "“Very relaxing atmosphere, I’ll come back!” - Julia W.",
-                review5: "“The best manicure I’ve ever had!” - Sophie T.",
-                locationTitle: "Our Location",
-                location: "Löwengartenstrasse 12, 9400 Rorschach, Switzerland",
-                imprint: "Imprint",
-                privacyPolicy: "Privacy Policy"
-            }
-        };
-
-        // Функция для переключения языка
-        document.addEventListener('DOMContentLoaded', () => {
-            const languageSelector = document.getElementById('language');
-            languageSelector.addEventListener('change', changeLanguage);
-
-            function changeLanguage() {
-                const selectedLanguage = languageSelector.value;
-                const textElements = document.querySelectorAll('[id]');
-
-                textElements.forEach(element => {
-                    const langKey = element.id;
-                    if (translations[selectedLanguage] && translations[selectedLanguage][langKey]) {
-                        element.textContent = translations[selectedLanguage][langKey];
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 </html>
