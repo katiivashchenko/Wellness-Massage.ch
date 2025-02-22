@@ -1,148 +1,212 @@
-<!DOCTYPE html><html lang="de">
+<!DOCTYPE html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness & Massage</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" defer></script>
-    <style>
-        body {
-            background-color: #000;
-            color: #D4AF37;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        header {
-            padding: 20px;
-            position: relative;
-            z-index: 10;
-        }
-        .contact-buttons {
-            display: flex;
-            gap: 10px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .contact-buttons a {
-            color: #D4AF37;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .contact-buttons a:hover {
-            background-color: #555;
-        }
-        section {
-            margin-top: 80px;
-        }
-        .reviews {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .review {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            max-width: 600px;
-            text-align: left;
-        }
-        .review img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #111;
-        }
-        footer a, #services a {
-            color: #D4AF37;
-            text-decoration: none;
-        }
-        .map iframe {
-            max-width: 500px;
-            width: 90%;
-            display: block;
-            margin: 0 auto;
-        }
-        .back-to-home {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: #D4AF37;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            width: 200px;
-            margin: 20px auto;
-        }
-        .back-to-home a {
-            color: #D4AF37;
-            text-decoration: none;
-        }
-        .back-to-home a:hover {
-            color: #C0C0C0;
-        }
-        @media (max-width: 768px) {
-            .contact-buttons {
-                position: static;
-                justify-content: center;
-                margin-top: 10px;
-            }
-            .map iframe {
-                max-width: 100%;
-                height: 250px;
-            }
-        }
-        .animated-text {
-            animation: fadeInUp 2s ease-out;
-        }
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        #location a {
-            color: #D4AF37;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness & Massage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js" defer></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #D4AF37;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            padding: 20px;
+            position: relative;
+            z-index: 10; /* Ensures header stays on top */
+        }
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .contact-buttons a {
+            color: #C0C0C0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .contact-buttons a:hover {
+            background-color: #555;
+        }
+        section {
+            margin-top: 80px; /* Adjusted for header spacing */
+        }
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .review {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            text-align: left;
+        }
+        .review img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #111;
+        }
+        footer a, #services a {
+            color: #C0C0C0;
+            text-decoration: none;
+        }
+        #services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #services li {
+            margin: 10px 0;
+        }
+        .map iframe {
+            max-width: 500px;
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+        .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 200px;
+            margin: 20px auto;
+        }
+        .back-to-home a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .back-to-home a:hover {
+            color: #D4AF37;
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                position: static;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .contact-buttons a {
+                font-size: 16px;
+                padding: 8px;
+            }
+            .map iframe {
+                max-width: 100%;
+                height: 250px;
+            }
+        }
+        .animated-text {
+            animation: fadeInUp 2s ease-out;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        #location a {
+            color: #D4AF37;
+        }
+        #location a:hover {
+            color: #C0C0C0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1 class="animated-text">Wellness & Massage</h1>
-        <div class="contact-buttons">
-            <a href="tel:+41798615388">📞 Anrufen</a>
-            <a href="https://wa.me/41798615388">💬 WhatsApp</a>
-        </div>
-    </header>
-    <section class="map">
-        <h2 class="animated-text">Unser Standort</h2>
-        <p>
-            <a href="https://www.google.com/maps?q=L%C3%B6wengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" target="_blank">
-                Löwengartenstrasse 12, 9400 Rorschach, Schweiz
-            </a>
-        </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" width="80%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-    <footer>
-        <a href="impressum.html" target="_blank">Impressum</a> |
-        <a href="datenschutz.html" target="_blank">Datenschutz</a>
-    </footer>
+    <header>
+        <h1 class="animated-text" id="title">Wellness & Massage</h1>
+        <div class="contact-buttons">
+            <a href="tel:+41798615388" id="call">📞 Anrufen</a>
+            <a href="https://wa.me/41798615388" id="whatsapp">💬 WhatsApp</a>
+        </div>
+    </header>
+
+    <section id="intro">
+        <p class="animated-text" id="intro">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+    </section>
+
+    <section id="services">
+        <h2 class="animated-text" id="services-title">Unsere Leistungen</h2>
+        <ul>
+            <li><a href="massage.html" target="_blank" id="massage">Massage</a></li>
+            <li><a href="maniküre.html" target="_blank" id="manicure">Maniküre</a></li>
+            <li><a href="pediküre.html" target="_blank" id="pedicure">Pediküre</a></li>
+            <li><a href="waxing.html" target="_blank" id="waxing">Waxing</a></li>
+            <li><a href="laser-haarentfernung.html" target="_blank" id="laser-hair-removal">Laser-Haarentfernung</a></li>
+            <li><a href="preisliste.html" target="_blank" class="preisliste" id="price-list">Preisliste</a></li>
+        </ul>
+    </section>
+
+    <section class="reviews">
+        <h2 class="animated-text" id="reviews-title">Kundenbewertungen</h2>
+        <div class="review">
+            <img src="images/client1.jpg" alt="Kundenfoto 1">
+            <p id="review1">„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+        </div>
+        <div class="review">
+            <img src="images/client2.jpg" alt="Kundenfoto 2">
+            <p id="review2">„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+        </div>
+        <div class="review">
+            <img src="images/client3.jpg" alt="Kundenfoto 3">
+            <p id="review3">„Sehr professioneller Service.“ - Mark S.</p>
+        </div>
+        <div class="review">
+            <img src="images/client4.jpg" alt="Kundenfoto 4">
+            <p id="review4">„Sehr entspannende Atmosphäre, ich komme gerne wieder!“ - Julia W.</p>
+        </div>
+        <div class="review">
+            <img src="images/client5.jpg" alt="Kundenfoto 5">
+            <p id="review5">„Die beste Maniküre, die ich je hatte!“ - Sophie T.</p>
+        </div>
+    </section>
+
+    <section class="map">
+        <h2 class="animated-text" id="location-title">Unser Standort</h2>
+        <p id="location">
+            <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" target="_blank">
+                Löwengartenstrasse 12, 9400 Rorschach, Schweiz
+            </a>
+        </p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=...1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000"
+            width="80%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <footer>
+        <a href="impressum.html" target="_blank" id="imprint">Impressum</a> |
+        <a href="datenschutz.html" target="_blank" id="privacy-policy">Datenschutz</a>
+    </footer>
 </body>
 </html>
