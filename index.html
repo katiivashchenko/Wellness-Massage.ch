@@ -140,11 +140,29 @@
                 height: 250px;
             }
         }
+        /* Стили для анимации */
+        .animated-text {
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .testimonials p {
+            animation: fadeIn 5s infinite;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Wellness & Massage</h1>
+        <h1 class="animated-text">Wellness & Massage</h1>
         <div class="contact-buttons">
             <a href="tel:+41798615388">📞 Anrufen</a>
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
@@ -160,9 +178,11 @@
             </select>
         </div>
     </header>
+
     <section id="intro">
         <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
+
     <section id="services">
         <h2>Unsere Leistungen</h2>
         <ul>
@@ -174,6 +194,7 @@
             <li><a href="preisliste.html" target="_blank" class="preisliste">Preisliste</a></li>
         </ul>
     </section>
+
     <section class="reviews">
         <h2>Kundenbewertungen</h2>
         <div class="review">
@@ -197,6 +218,7 @@
             <p>„Die beste Maniküre, die ich je hatte!“ - Sophie T.</p>
         </div>
     </section>
+
     <section class="map">
         <h2>Unser Standort</h2>
         <p>Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
@@ -209,6 +231,7 @@
             loading="lazy">
         </iframe>
     </section>
+
     <footer>
         <a href="impressum.html" target="_blank">Impressum</a> | 
         <a href="datenschutz.html" target="_blank">Datenschutz</a>
