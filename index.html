@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="de">
-<head>
+<!DOCTYPE html><html lang="de"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness & Massage</title>
@@ -15,37 +14,56 @@
         }
         header {
             padding: 20px;
+            position: relative;
         }
         .contact-buttons {
+            display: flex;
+            gap: 10px;
             position: absolute;
             top: 10px;
             right: 10px;
         }
         .contact-buttons a {
-            color: #008000; /* Зелёный цвет */
-            margin: 0 10px;
+            color: #C0C0C0;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
-        .reviews, .map {
-            margin: 40px 0;
+        .contact-buttons a:hover {
+            background-color: #555;
         }
-        .reviews img {
-            width: 80px;
-            height: 80px;
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .review {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            text-align: left;
+        }
+        .review img {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            margin: 10px;
         }
         footer {
             margin-top: 40px;
             padding: 20px;
             background-color: #111;
         }
-        footer a {
-            color: blue; /* Синий цвет */
+        footer a, #services a {
+            color: #C0C0C0;
             text-decoration: none;
-            margin: 0 10px;
         }
         #services ul {
             list-style-type: none;
@@ -54,8 +72,26 @@
         #services li {
             margin: 10px 0;
         }
-        #services a {
-            color: blue; /* Синий цвет */
+        .map iframe {
+            max-width: 500px;
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                position: static;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .contact-buttons a {
+                font-size: 16px;
+                padding: 8px;
+            }
+            .map iframe {
+                max-width: 100%;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -63,66 +99,54 @@
     <header>
         <h1>Wellness & Massage</h1>
         <div class="contact-buttons">
-            <a href="tel:+41798615388">📞 Telefon</a>
+            <a href="tel:+41798615388">📞 Anrufen</a>
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
         </div>
-    </header><section id="intro">
-    <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
-</section>
-
-<section id="services">
-    <h2>Unsere Leistungen</h2>
-    <ul>
-        <li><a href="massage.html" target="_blank">Massage</a></li>
-        <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
-        <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
-        <li><a href="waxing.html" target="_blank">Waxing</a></li>
-        <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung</a></li>
-        <li><a href="preisliste.html" target="_blank" class="preisliste">Preisliste</a></li>
-    </ul>
-</section>
-
-<section class="reviews">
-    <h2>Kundenbewertungen</h2>
-    <div>
-        <img src="review1.jpg" alt="Kundenfoto 1">
-        <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
-    </div>
-    <div>
-        <img src="review2.jpg" alt="Kundenfoto 2">
-        <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
-    </div>
-    <div>
-        <img src="review3.jpg" alt="Kundenfoto 3">
-        <p>„Sehr professioneller Service.“ - Mark S.</p>
-    </div>
-    <div>
-        <img src="review4.jpg" alt="Kundenfoto 4">
-        <p>„Ich bin sehr zufrieden mit der Behandlung!“ - Sophie L.</p>
-    </div>
-    <div>
-        <img src="review5.jpg" alt="Kundenfoto 5">
-        <p>„Freundliches Personal und tolle Atmosphäre.“ - David B.</p>
-    </div>
-</section>
-
-<section class="map">
-    <h2>Unser Standort</h2>
-    <p>Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" 
-        width="80%" 
-        height="300" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
-</section>
-
-<footer>
-    <a href="impressum.html" target="_blank">Impressum</a> | 
-    <a href="datenschutz.html" target="_blank">Datenschutz</a>
-</footer>
-
+    </header>
+    <section id="intro">
+        <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+    </section>
+    <section id="services">
+        <h2>Unsere Leistungen</h2>
+        <ul>
+            <li><a href="massage.html" target="_blank">Massage</a></li>
+            <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
+            <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
+            <li><a href="waxing.html" target="_blank">Waxing</a></li>
+            <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung</a></li>
+            <li><a href="preisliste.html" target="_blank" class="preisliste">Preisliste</a></li>
+        </ul>
+    </section>
+    <section class="reviews">
+        <h2>Kundenbewertungen</h2>
+        <div class="review">
+            <img src="review1.jpg" alt="Kundenfoto 1">
+            <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+        </div>
+        <div class="review">
+            <img src="review2.jpg" alt="Kundenfoto 2">
+            <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+        </div>
+        <div class="review">
+            <img src="review3.jpg" alt="Kundenfoto 3">
+            <p>„Sehr professioneller Service.“ - Mark S.</p>
+        </div>
+    </section>
+    <section class="map">
+        <h2>Unser Standort</h2>
+        <p>Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000" 
+            width="80%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+    <footer>
+        <a href="impressum.html" target="_blank">Impressum</a> | 
+        <a href="datenschutz.html" target="_blank">Datenschutz</a>
+    </footer>
 </body>
 </html>
