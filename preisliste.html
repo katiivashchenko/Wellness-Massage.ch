@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preisliste</title>
+    <title>Leistungen</title>
     <style>
         body {
             background-color: black;
@@ -20,14 +20,21 @@
             font-size: 18px;
             margin-bottom: 20px;
         }
-        .price-list {
+        .service {
+            margin-bottom: 40px;
+        }
+        .service ul {
             list-style-type: none;
             padding: 0;
             margin-bottom: 20px;
         }
-        .price-list li {
+        .service li {
             font-size: 20px;
             margin-bottom: 10px;
+        }
+        .separator {
+            border-top: 2px solid gold;
+            margin: 20px 0;
         }
         .back-button {
             display: inline-block;
@@ -46,11 +53,11 @@
     </style>
 </head>
 <body>
-    <h1>Preisliste</h1>
-    <p>Hier finden Sie unsere Preise für alle Dienstleistungen:</p>
+    <h1>Leistungen</h1>
+    <p>Hier finden Sie eine Übersicht unserer Dienstleistungen:</p>
 
-    <ul class="price-list">
-        <li><strong>Massage:</strong></li>
+    <div class="service">
+        <h2>Massage</h2>
         <ul>
             <li>1 Stunde – 100 CHF</li>
             <li>1,5 Stunden – 140 CHF</li>
@@ -60,7 +67,11 @@
             <li>Gesichtsmassage (20 min) – 30 CHF</li>
             <li>Anti-Cellulite Behandlung – 70 CHF</li>
         </ul>
-        <li><strong>Haarentfernung mit Laser oder Waxing:</strong></li>
+    </div>
+    <div class="separator"></div>
+
+    <div class="service">
+        <h2>Haarentfernung mit Laser oder Waxing</h2>
         <ul>
             <li>Beine von hinten und vorne – 60 CHF</li>
             <li>Achseln – 20 CHF</li>
@@ -70,12 +81,17 @@
             <li>Po – 30 CHF</li>
             <li>Gesicht – 20 CHF</li>
         </ul>
-        <li><strong>Maniküre & Pediküre:</strong></li>
+    </div>
+    <div class="separator"></div>
+
+    <div class="service">
+        <h2>Maniküre & Pediküre</h2>
         <ul>
             <li>Maniküre ab – 35 CHF</li>
             <li>Pediküre ab – 50 CHF</li>
         </ul>
-    </ul>
+    </div>
+    <div class="separator"></div>
 
     <a href="index.html" class="back-button">⬅ Zurück zur Startseite</a>
 </body>
