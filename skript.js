@@ -6,17 +6,20 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     const targetId = this.getAttribute('href').substring(1); // Holt die ID der Zielsektion
     const targetElement = document.getElementById(targetId); // Findet das Ziel-Element
 
-    window.scrollTo({
-      top: targetElement.offsetTop - 20, // Scrollt mit kleinem Abstand zur gewünschten Sektion
-      behavior: 'smooth' // Sanftes Scrollen
-    });
+    if (targetElement) { // Überprüft, ob das Ziel-Element existiert
+      window.scrollTo({
+        top: targetElement.offsetTop - 20, // Scrollt mit kleinem Abstand zur gewünschten Sektion
+        behavior: 'smooth' // Sanftes Scrollen
+      });
+    }
   });
 });
 
 // Funktion für Animation (Beispiel für sanftes Erscheinen der Sektionen)
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll('section');
-
+  
+  // Fügt die 'fade-in' Klasse nur hinzu, wenn die Sektion noch nicht sichtbar ist
   sections.forEach(section => {
     section.classList.add('fade-in');
   });
@@ -26,9 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
 
-  // Fügt die Klasse für Animation hinzu, wenn die Sektion im sichtbaren Bereich erscheint
-  document.querySelectorAll('section').forEach((section, index) => {
-    if (section.offsetTop - 200 < scrollY) {
+  document.querySelectorAll('section').forEach(section => {
+    const sectionOffsetTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    // Fügt die Klasse für Animation hinzu, wenn die Sektion im sichtbaren Bereich erscheint
+    if (sectionOffsetTop - 200 < scrollY && sectionOffsetTop + sectionHeight > scrollY) {
       section.classList.add('visible');
     } else {
       section.classList.remove('visible');
