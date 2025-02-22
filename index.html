@@ -3,10 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wellness & Massage - Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung in Rorschach.">
-    <meta name="author" content="Wellness & Massage">
     <title>Wellness & Massage</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Подключение внешнего CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #000; /* Черный фон */
+            color: #D4AF37; /* Золотой текст */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            position: relative;
+        }
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .contact-buttons a {
+            color: #C0C0C0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .contact-buttons a:hover {
+            background-color: #555;
+        }
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .review {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            text-align: left;
+        }
+        .review img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #111;
+        }
+        footer a, #services a {
+            color: #C0C0C0;
+            text-decoration: none;
+        }
+        #services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #services li {
+            margin: 10px 0;
+        }
+        .map iframe {
+            max-width: 500px;
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            .contact-buttons {
+                position: static;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .contact-buttons a {
+                font-size: 16px;
+                padding: 8px;
+            }
+            .map iframe {
+                max-width: 100%;
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,11 +105,9 @@
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
         </div>
     </header>
-    
     <section id="intro">
         <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
-    
     <section id="services">
         <h2>Unsere Leistungen</h2>
         <ul>
@@ -32,80 +119,21 @@
             <li><a href="preisliste.html" target="_blank" class="preisliste">Preisliste</a></li>
         </ul>
     </section>
-    
-    <section class="gallery">
-        <h2>Unsere Arbeiten</h2>
-        <div class="work">
-            <h3>Maniküre</h3>
-            <picture>
-                <source srcset="images/manicure1.webp" type="image/webp">
-                <img src="images/manicure1.jpg" alt="Maniküre 1" class="work-image">
-            </picture>
-            <picture>
-                <source srcset="images/manicure2.webp" type="image/webp">
-                <img src="images/manicure2.jpg" alt="Maniküre 2" class="work-image">
-            </picture>
-        </div>
-        <div class="work">
-            <h3>Pediküre</h3>
-            <picture>
-                <source srcset="images/pedicure1.webp" type="image/webp">
-                <img src="images/pedicure1.jpg" alt="Pediküre 1" class="work-image">
-            </picture>
-            <picture>
-                <source srcset="images/pedicure2.webp" type="image/webp">
-                <img src="images/pedicure2.jpg" alt="Pediküre 2" class="work-image">
-            </picture>
-        </div>
-        <div class="work">
-            <h3>Waxing</h3>
-            <picture>
-                <source srcset="images/waxing1.webp" type="image/webp">
-                <img src="images/waxing1.jpg" alt="Waxing 1" class="work-image">
-            </picture>
-            <picture>
-                <source srcset="images/waxing2.webp" type="image/webp">
-                <img src="images/waxing2.jpg" alt="Waxing 2" class="work-image">
-            </picture>
-        </div>
-        <div class="work">
-            <h3>Laser-Haarentfernung</h3>
-            <picture>
-                <source srcset="images/laser1.webp" type="image/webp">
-                <img src="images/laser1.jpg" alt="Laser-Haarentfernung 1" class="work-image">
-            </picture>
-            <picture>
-                <source srcset="images/laser2.webp" type="image/webp">
-                <img src="images/laser2.jpg" alt="Laser-Haarentfernung 2" class="work-image">
-            </picture>
-        </div>
-    </section>
-
     <section class="reviews">
         <h2>Kundenbewertungen</h2>
         <div class="review">
-            <picture>
-                <source srcset="images/client1.webp" type="image/webp">
-                <img src="images/client1.jpg" alt="Kundenfoto 1" class="review-image">
-            </picture>
+            <img src="images/client1.jpg" alt="Kundenfoto 1">
             <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
         </div>
         <div class="review">
-            <picture>
-                <source srcset="images/client2.webp" type="image/webp">
-                <img src="images/client2.jpg" alt="Kundenfoto 2" class="review-image">
-            </picture>
+            <img src="images/client2.jpg" alt="Kundenfoto 2">
             <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
         </div>
         <div class="review">
-            <picture>
-                <source srcset="images/client3.webp" type="image/webp">
-                <img src="images/client3.jpg" alt="Kundenfoto 3" class="review-image">
-            </picture>
+            <img src="images/client3.jpg" alt="Kundenfoto 3">
             <p>„Sehr professioneller Service.“ - Mark S.</p>
         </div>
     </section>
-    
     <section class="map">
         <h2>Unser Standort</h2>
         <p>Löwengartenstrasse 12, 9400 Rorschach, Schweiz</p>
@@ -118,15 +146,9 @@
             loading="lazy">
         </iframe>
     </section>
-    
     <footer>
-        <nav>
-            <a href="impressum.html" target="_blank">Impressum</a> | 
-            <a href="datenschutz.html" target="_blank">Datenschutz</a>
-        </nav>
+        <a href="impressum.html" target="_blank">Impressum</a> | 
+        <a href="datenschutz.html" target="_blank">Datenschutz</a>
     </footer>
-    
-    <!-- Подключение внешнего JavaScript файла -->
-    <script src="script.js"></script>
 </body>
 </html>
