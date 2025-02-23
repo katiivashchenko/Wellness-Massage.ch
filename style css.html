@@ -62,7 +62,35 @@ nav ul li a {
 nav ul li a:hover {
   color: #FFD700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  transform: scale(1.1); /* Легкое увеличение при наведении */
+  transform: scale(1.1);
+}
+
+/* Кнопки телефона и WhatsApp */
+.contact-buttons {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+}
+
+.contact-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #FFD700;
+  color: #111;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-buttons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
 /* Sektionen */
@@ -80,7 +108,7 @@ section.visible {
 }
 
 .section-home {
-  background-image: url('background.jpg'); /* Geben Sie den Pfad zum Hintergrundbild an */
+  background-image: url('background.jpg');
   background-size: cover;
   background-position: center;
   color: #FFD700;
@@ -202,5 +230,11 @@ footer {
   .service-list {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .contact-buttons {
+    top: 10px;
+    right: 10px;
+    flex-direction: column;
   }
 }
