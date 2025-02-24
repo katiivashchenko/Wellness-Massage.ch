@@ -6,7 +6,6 @@
     <title>Wellness & Massage</title>
     <link rel="stylesheet" href="styles.css">
     <script src="javascript.js" defer></script>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             background-color: #000;
@@ -131,39 +130,37 @@
             0% { opacity: 0; transform: translateY(50px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-        #location a {
+        .map-link {
             color: #D4AF37;
+            text-decoration: none;
+            font-weight: bold;
         }
-        #location a:hover {
+        .map-link:hover {
             color: #FFD700;
-        }
-        #working-hours {
-            margin-top: 40px;
-            font-size: 18px;
-            color: #D4AF37;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="animated-text" id="title">Wellness & Massage</h1>
+        <h1 class="animated-text">Wellness & Massage</h1>
         <div class="contact-buttons">
-            <a href="tel:+41798615388" id="call">📞 Anrufen</a>
-            <a href="https://wa.me/41798615388" target="_blank" rel="noopener noreferrer" id="whatsapp">💬 WhatsApp</a>
+            <a href="tel:+41798615388">📞 Anrufen</a>
+            <a href="https://wa.me/41798615388">💬 WhatsApp</a>
         </div>
     </header>
-    <section>
+    <section id="intro">
         <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
     <section id="services">
         <h2 class="animated-text">Unsere Leistungen</h2>
         <ul>
-            <li><a href="massage.html" target="_blank" rel="noopener noreferrer">Massage</a></li>
-            <li><a href="maniküre.html" target="_blank" rel="noopener noreferrer">Maniküre</a></li>
-            <li><a href="pediküre.html" target="_blank" rel="noopener noreferrer">Pediküre</a></li>
-            <li><a href="waxing.html" target="_blank" rel="noopener noreferrer">Waxing</a></li>
-            <li><a href="laser-haarentfernung.html" target="_blank" rel="noopener noreferrer">Laser-Haarentfernung</a></li>
-            <li><a href="preisliste.html" target="_blank" rel="noopener noreferrer">Preisliste</a></li>
+            <li><a href="massage.html" target="_blank">Massage</a></li>
+            <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
+            <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
+            <li><a href="waxing.html" target="_blank">Waxing</a></li>
+            <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung</a></li>
+            <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
         </ul>
     </section>
     <section class="reviews">
@@ -184,7 +181,10 @@
     <section class="map">
         <h2 class="animated-text">Unser Standort</h2>
         <p>
-            <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="map-link">
                 Löwengartenstrasse 12, 9400 Rorschach, Schweiz
             </a>
         </p>
@@ -197,9 +197,14 @@
             loading="lazy">
         </iframe>
     </section>
+    <section>
+        <h2>Unsere Öffnungszeiten</h2>
+        <p>Mo - Sa: 09:00 - 19:00</p>
+        <p>So: Frei</p>
+    </section>
     <footer>
-        <a href="impressum.html" target="_blank" rel="noopener noreferrer">Impressum</a> |
-        <a href="datenschutz.html" target="_blank" rel="noopener noreferrer">Datenschutz</a>
+        <a href="impressum.html" target="_blank">Impressum</a> |
+        <a href="datenschutz.html" target="_blank">Datenschutz</a>
     </footer>
 </body>
 </html>
