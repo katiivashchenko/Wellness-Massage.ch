@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="styles.css">
     <script src="javascript.js" defer></script>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animated {
+            animation: fadeIn 1.2s ease-in-out;
+        }
         body {
             background-color: #000;
             color: #D4AF37;
@@ -14,7 +21,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-image: url('background.jpg');
+            background-image: url('images/background.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -89,71 +96,26 @@
             display: block;
             margin: 0 auto;
         }
-        .back-to-home {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            width: 200px;
-            margin: 20px auto;
-        }
-        .back-to-home a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .back-to-home a:hover {
-            color: #D4AF37;
-        }
         @media (max-width: 768px) {
             .contact-buttons {
                 position: static;
                 justify-content: center;
                 margin-top: 10px;
             }
-            .contact-buttons a {
-                font-size: 16px;
-                padding: 8px;
-            }
-            .map iframe {
-                max-width: 100%;
-                height: 250px;
-            }
-        }
-        .animated-text {
-            animation: fadeInUp 2s ease-out;
-        }
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        .map-link {
-            color: #D4AF37;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .map-link:hover {
-            color: #FFD700;
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="animated-text">Wellness & Massage</h1>
+    <header class="animated">
+        <h1>Wellness & Massage</h1>
         <div class="contact-buttons">
             <a href="tel:+41798615388">📞 Anrufen</a>
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
         </div>
     </header>
-    <section id="intro">
-        <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
-    </section>
-    <section id="services">
-        <h2 class="animated-text">Unsere Leistungen</h2>
+
+    <section id="services" class="animated">
+        <h2>Unsere Leistungen</h2>
         <ul>
             <li><a href="massage.html" target="_blank">Massage</a></li>
             <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
@@ -163,8 +125,9 @@
             <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
         </ul>
     </section>
-    <section class="reviews">
-        <h2 class="animated-text">Kundenbewertungen</h2>
+
+    <section class="reviews animated">
+        <h2>Kundenbewertungen</h2>
         <div class="review">
             <picture>
                 <source srcset="images/client1.webp" type="image/webp">
@@ -187,13 +150,13 @@
             <p>„Sehr professioneller Service.“ - Mark S.</p>
         </div>
     </section>
-    <section class="map">
-        <h2 class="animated-text">Unser Standort</h2>
+
+    <section class="map animated">
+        <h2>Unser Standort</h2>
         <p>
             <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
                target="_blank" 
-               rel="noopener noreferrer" 
-               class="map-link">
+               rel="noopener noreferrer">
                 Löwengartenstrasse 12, 9400 Rorschach, Schweiz
             </a>
         </p>
@@ -206,12 +169,8 @@
             loading="lazy">
         </iframe>
     </section>
-    <section>
-        <h2>Unsere Öffnungszeiten</h2>
-        <p>Mo - Sa: 09:00 - 19:00</p>
-        <p>So: Frei</p>
-    </section>
-    <footer>
+
+    <footer class="animated">
         <a href="impressum.html" target="_blank">Impressum</a> |
         <a href="datenschutz.html" target="_blank">Datenschutz</a>
     </footer>
