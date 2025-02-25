@@ -11,38 +11,69 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
-        h1 {
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1, h2 {
             color: gold;
             margin-bottom: 10px;
+            opacity: 0;
+            animation: slideIn 1.5s ease-in-out forwards;
         }
-        h2 {
-            color: gold;
-            margin-top: 30px;
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        p {
+
+        p, ul {
             font-size: 18px;
             margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInText 1.5s ease-in-out forwards;
         }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .image-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
         }
+
         .image-container img {
             width: 100%;
             max-width: 300px;
             height: auto;
             border-radius: 10px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.5s ease-in-out;
+            opacity: 0;
+            animation: fadeInImage 1.5s ease-in-out forwards;
         }
+
+        @keyframes fadeInImage {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
         .image-container img:hover {
             transform: scale(1.1);
         }
+
         .contact-buttons {
             margin: 20px 0;
         }
+
         .contact-buttons a {
             display: inline-block;
             background-color: silver;
@@ -52,11 +83,21 @@
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.2s ease-in-out;
+            opacity: 0;
+            animation: fadeInButton 1.5s ease-in-out forwards;
         }
+
+        @keyframes fadeInButton {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .contact-buttons a:hover {
             background-color: gray;
+            transform: scale(1.1);
         }
+
         .back-button {
             display: inline-block;
             margin-top: 30px;
@@ -66,11 +107,16 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s ease-in-out;
+            opacity: 0;
+            animation: fadeInButton 1.5s ease-in-out forwards;
         }
+
         .back-button:hover {
             background-color: gray;
+            transform: scale(1.1);
         }
+
         @media (max-width: 600px) {
             p {
                 font-size: 16px;
@@ -95,21 +141,21 @@
     <h2>Verwendete Geräte und Technologien</h2>
     <p>Bei der Laser-Haarentfernung verwende ich hochwertige und sichere Geräte, die für ihre Effizienz und Hautfreundlichkeit bekannt sind. Die verwendete Technologie arbeitet mit gezielten Lichtimpulsen, die die Haarwurzeln zerstören, ohne die umliegende Haut zu schädigen.</p>
     <ul>
-        <li><strong>Diode-Laser:</strong> Dieser Laser ist besonders effektiv bei der Haarentfernung und sorgt für schnelle Ergebnisse, da er die Haarfollikel tief unter der Haut erreicht. Ideal für verschiedene Hauttypen und Haartypen.</li>
-        <li><strong>IPL-Technologie (Intense Pulsed Light):</strong> Diese Technologie nutzt Lichtimpulse, um die Haarwurzeln zu veröden und das Wachstum der Haare zu hemmen. Sie ist besonders für großflächige Behandlungen wie Beine oder Rücken geeignet.</li>
-        <li><strong>Alexandrit-Laser:</strong> Ein äußerst präzises Gerät, das auf Melanin im Haar abzielt, ideal für Menschen mit heller Haut und dunklen Haaren. Dieser Laser arbeitet schnell und bietet komfortable Behandlungen.</li>
+        <li><strong>Diode-Laser:</strong> Besonders effektiv für verschiedene Haut- und Haartypen.</li>
+        <li><strong>IPL-Technologie:</strong> Lichtimpulse veröden die Haarwurzeln sanft.</li>
+        <li><strong>Alexandrit-Laser:</strong> Ideal für helle Haut und dunkle Haare.</li>
     </ul>
 
     <h2>Sicherheit und Hygiene</h2>
-    <p>Die Sicherheit unserer Kunden steht bei uns an erster Stelle. Deshalb werden alle Geräte nach jeder Behandlung gründlich desinfiziert und sterilisiert, um höchste Hygienestandards zu gewährleisten.</p>
+    <p>Die Sicherheit unserer Kunden steht bei uns an erster Stelle. Deshalb werden alle Geräte nach jeder Behandlung gründlich desinfiziert und sterilisiert.</p>
     <ul>
-        <li><strong>Desinfektion:</strong> Alle Instrumente und Geräte werden mit speziellen Desinfektionsmitteln gereinigt, um Keime und Bakterien zu eliminieren.</li>
-        <li><strong>Sterilisation:</strong> Zur Sicherheit unserer Kunden werden alle wiederverwendbaren Geräte, wie Aufsätze, sterilisiert, um eine Kreuzkontamination zu vermeiden.</li>
-        <li><strong>Einmalgebrauchsmaterialien:</strong> Für jede Behandlung verwenden wir Einwegmaterialien, wie Handschuhe, Auflagen und Tücher, die nach jedem Einsatz entsorgt werden.</li>
+        <li><strong>Desinfektion:</strong> Keimfreie Behandlungen dank moderner Reinigungsmethoden.</li>
+        <li><strong>Sterilisation:</strong> Alle Geräte werden nach höchsten Standards gereinigt.</li>
+        <li><strong>Einmalgebrauchsmaterialien:</strong> Hygienische Handschuhe, Auflagen und Tücher.</li>
     </ul>
 
     <h2>Warum Laser-Haarentfernung?</h2>
-    <p>Laser-Haarentfernung ist eine der effektivsten Methoden, um unerwünschte Haare dauerhaft zu entfernen. Im Vergleich zu anderen Methoden wie Waxing oder Rasieren ist sie weniger schmerzhaft und bietet langanhaltende Ergebnisse. Sie ist für alle Körperregionen geeignet und besonders vorteilhaft für empfindliche Bereiche wie das Gesicht oder die Bikinizone.</p>
+    <p>Laser-Haarentfernung ist eine der effektivsten Methoden, um unerwünschte Haare dauerhaft zu entfernen. Sie ist für alle Körperregionen geeignet und besonders vorteilhaft für empfindliche Bereiche wie das Gesicht oder die Bikinizone.</p>
 
     <div class="contact-buttons">
         <a href="tel:+41798615388">📞 Telefon</a>
