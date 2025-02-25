@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pediküre</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animated {
+            animation: fadeIn 1.2s ease-in-out;
+        }
         body {
             background-color: black;
             color: silver;
@@ -83,18 +90,18 @@
     </style>
 </head>
 <body>
-    <h1>Pediküre</h1>
-    <p>Professionelle Pediküre für schöne Füße und Nägel. Verwöhnen Sie sich mit einer luxuriösen Behandlung für Ihre Füße, die sie glatt und gepflegt hält.</p>
+    <h1 class="animated">Pediküre</h1>
+    <p class="animated">Professionelle Pediküre für schöne Füße und Nägel. Verwöhnen Sie sich mit einer luxuriösen Behandlung für Ihre Füße, die sie glatt und gepflegt hält.</p>
 
-    <div class="image-container">
+    <div class="image-container animated">
         <img src="pediküre1.jpg" alt="Pediküre Bild 1">
         <img src="pediküre2.jpg" alt="Pediküre Bild 2">
         <img src="pediküre3.jpg" alt="Pediküre Bild 3">
     </div>
 
-    <h2>Verwendete Produkte und Werkzeuge</h2>
-    <p>Für eine perfekte Pediküre verwende ich nur hochwertige Produkte und professionelle Werkzeuge:</p>
-    <ul>
+    <h2 class="animated">Verwendete Produkte und Werkzeuge</h2>
+    <p class="animated">Für eine perfekte Pediküre verwende ich nur hochwertige Produkte und professionelle Werkzeuge:</p>
+    <ul class="animated">
         <li><strong>Nagellacke:</strong> Ich benutze bekannte Marken wie OPI, Essie und CND, die für ihre Haltbarkeit und glänzende Oberfläche bekannt sind. Sie sind in einer Vielzahl von Farben und Texturen erhältlich, die Ihren Füßen einen eleganten Look verleihen.</li>
         <li><strong>Base und Top Coat:</strong> Ein professioneller Base Coat sorgt für eine langanhaltende Haltbarkeit des Lacks, während der Top Coat den Glanz verstärkt und die Nägel schützt.</li>
         <li><strong>Fußpflegeprodukte:</strong> Feuchtigkeitsspendende Cremes und Peelings, die die Haut weich und glatt machen, sowie Nagelhautöle zur Pflege der Nagelhaut.</li>
@@ -102,14 +109,14 @@
         <li><strong>Pediküre-Geräte:</strong> Ich benutze elektrische Fußfeilen und spezielle Tools zur Entfernung von Hornhaut, um Ihre Füße glatt und gesund zu halten.</li>
     </ul>
 
-    <p>Mit diesen hochwertigen Produkten und Tools sorge ich dafür, dass Ihre Pediküre nicht nur schön aussieht, sondern Ihre Füße sich auch rundum gepflegt anfühlen.</p>
+    <p class="animated">Mit diesen hochwertigen Produkten und Tools sorge ich dafür, dass Ihre Pediküre nicht nur schön aussieht, sondern Ihre Füße sich auch rundum gepflegt anfühlen.</p>
 
-    <div class="contact-buttons">
+    <div class="contact-buttons animated">
         <a href="tel:+41798615388">📞 Telefon</a>
         <a href="https://wa.me/41798615388">💬 WhatsApp</a>
     </div>
 
-    <a href="index.html" class="back-button">⬅ Zurück zur Startseite</a>
+    <a href="index.html" class="back-button animated">⬅ Zurück zur Startseite</a>
 
 </body>
 </html>
