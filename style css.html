@@ -1,13 +1,25 @@
-/* Общий стиль */
-body {
-  font-family: 'Arial', sans-serif;
+/* Сброс стилей и базовые настройки */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #111;
-  color: #C0C0C0;
 }
 
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #C0C0C0;
+  text-align: center;
+}
+
+/* Ограничение ширины контента */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Заголовки */
 h1, h2, h3 {
   font-family: 'Georgia', serif;
   color: #FFD700;
@@ -17,14 +29,14 @@ h1, h2, h3 {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+a:hover {
+  color: #FFD700;
 }
 
-/* Стиль для хедера */
+/* Стили хедера */
 header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -45,8 +57,10 @@ header .logo a {
   text-transform: uppercase;
 }
 
+/* Навигация */
 nav ul {
   display: flex;
+  list-style: none;
 }
 
 nav ul li {
@@ -56,23 +70,23 @@ nav ul li {
 nav ul li a {
   font-size: 18px;
   color: #C0C0C0;
-  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease, letter-spacing 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #FFD700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  transform: scale(1.1);
+  letter-spacing: 1px;
 }
 
-/* Стиль для кнопок телефона и WhatsApp */
+/* Кнопки контактов (телефон и WhatsApp) */
 .contact-buttons {
   display: flex;
   gap: 10px;
   position: fixed;
-  top: 20px; /* Устанавливаем кнопки чуть ниже */
-  right: 20px; /* Устанавливаем кнопки в правый верхний угол */
-  z-index: 1001;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
 }
 
 .contact-buttons a {
@@ -93,11 +107,81 @@ nav ul li a:hover {
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
-/* Убедитесь, что ничего не мешает этим кнопкам */
-body {
-  position: relative;
+/* Раздел услуг */
+#services ul {
+  list-style: none;
+  padding: 0;
 }
 
+#services li {
+  margin: 10px 0;
+}
+
+/* Отзывы */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.review img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Карта */
+.map iframe {
+  max-width: 500px;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.map-link {
+  color: #D4AF37;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.map-link:hover {
+  color: #FFD700;
+  text-decoration: underline;
+}
+
+/* Кнопка "назад на главную" */
+.back-to-home {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 200px;
+  margin: 20px auto;
+}
+
+.back-to-home a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.back-to-home a:hover {
+  color: #D4AF37;
+}
+
+/* Футер */
 footer {
   background-color: #111;
   color: #C0C0C0;
@@ -107,22 +191,27 @@ footer {
   margin-top: 40px;
 }
 
-/* Анимации для плавного появления */
+footer a {
+  color: #C0C0C0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #FFD700;
+}
+
+/* Анимации */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(50px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-/* Responsives Design */
+/* Адаптивность */
 @media (max-width: 768px) {
   header {
     padding: 15px;
@@ -153,8 +242,14 @@ footer {
   }
 
   .contact-buttons {
-    top: 20px; /* Подготовим кнопки для мобильных устройств */
+    top: auto;
+    bottom: 20px;
     right: 20px;
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .map iframe {
+    max-width: 100%;
+    height: 250px;
   }
 }
