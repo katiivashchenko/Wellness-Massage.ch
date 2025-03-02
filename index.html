@@ -49,64 +49,32 @@
         section {
             margin-top: 80px;
         }
-        .reviews {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .review {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            max-width: 600px;
-            text-align: left;
-        }
-        .review img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-        }
-        footer {
+        h2 {
+            color: #D4AF37;
+            font-size: 28px;
             margin-top: 40px;
-            padding: 20px;
-            background-color: #111;
         }
-        footer a, #services a {
-            color: #C0C0C0;
-            text-decoration: none;
-        }
-        #services ul {
+        .services {
             list-style-type: none;
             padding: 0;
         }
-        #services li {
+        .services li {
             margin: 10px 0;
+        }
+        .services a {
+            color: #C0C0C0;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .services a:hover {
+            color: #FFD700;
         }
         .map iframe {
             max-width: 500px;
             width: 90%;
             display: block;
             margin: 0 auto;
-        }
-        .back-to-home {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            width: 200px;
-            margin: 20px auto;
-        }
-        .back-to-home a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .back-to-home a:hover {
-            color: #D4AF37;
         }
         .address-link {
             color: #D4AF37;
@@ -117,36 +85,28 @@
             color: #FFD700;
             text-decoration: underline;
         }
-        @media (max-width: 768px) {
-            .contact-buttons {
-                position: static;
-                justify-content: center;
-                margin-top: 10px;
-            }
-            .contact-buttons a {
-                font-size: 16px;
-                padding: 8px;
-            }
-            .map iframe {
-                max-width: 100%;
-                height: 250px;
-            }
+        .about-section {
+            margin-top: 60px;
         }
-        .animated-text {
-            animation: fadeInUp 2s ease-out;
-        }
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        .map-link {
+        .about-link {
             color: #D4AF37;
-            text-decoration: none;
+            font-size: 28px;
             font-weight: bold;
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
         }
-        .map-link:hover {
+        .about-link:hover {
             color: #FFD700;
-            text-decoration: underline;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #111;
+        }
+        footer a {
+            color: #C0C0C0;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -162,16 +122,19 @@
         <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
     <section id="services">
-        <h2 class="animated-text">Unsere Leistungen</h2>
-        <ul>
+        <h2 class="animated-text">UNSERE LEISTUNGEN</h2>
+        <ul class="services">
             <li><a href="massage.html" target="_blank">Massage</a></li>
             <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
             <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
             <li><a href="waxing.html" target="_blank">Waxing</a></li>
             <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung</a></li>
             <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
-            <li><a href="über-uns.html" target="_blank">Über uns</a></li>
         </ul>
+    </section>
+    <section class="about-section">
+        <h2 class="animated-text">ÜBER UNS</h2>
+        <a href="über-uns.html" target="_blank" class="about-link">Mehr erfahren</a>
     </section>
     <section class="map">
         <h2 class="animated-text">Unser Standort</h2>
