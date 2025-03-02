@@ -49,6 +49,23 @@
         section {
             margin-top: 80px;
         }
+        .menu {
+            list-style: none;
+            padding: 0;
+        }
+        .menu li {
+            margin: 10px 0;
+        }
+        .menu a {
+            color: #D4AF37;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+            color: #FFD700;
+        }
         .reviews {
             display: flex;
             flex-direction: column;
@@ -72,16 +89,9 @@
             padding: 20px;
             background-color: #111;
         }
-        footer a, #services a {
+        footer a {
             color: #C0C0C0;
             text-decoration: none;
-        }
-        #services ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        #services li {
-            margin: 10px 0;
         }
         .map iframe {
             max-width: 500px;
@@ -89,28 +99,20 @@
             display: block;
             margin: 0 auto;
         }
-        .animated-text {
-            animation: fadeInUp 2s ease-out;
-        }
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-        .map-link {
-            color: #D4AF37;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .map-link:hover {
-            color: #FFD700;
-            text-decoration: underline;
-        }
-        .about-us {
-            background-color: rgba(51, 51, 51, 0.5);
-            padding: 20px;
-            margin: 40px auto;
-            max-width: 800px;
-            border-radius: 10px;
+        @media (max-width: 768px) {
+            .contact-buttons {
+                position: static;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .contact-buttons a {
+                font-size: 16px;
+                padding: 8px;
+            }
+            .map iframe {
+                max-width: 100%;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -122,24 +124,21 @@
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
         </div>
     </header>
+
     <section id="intro">
         <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
 
-    <section class="about-us">
-        <h2 class="animated-text">Über uns</h2>
-        <p>Willkommen bei Wellness & Massage! Wir sind Ihr professionelles Studio für Entspannung, Schönheit und Wohlbefinden. Mit unserer langjährigen Erfahrung bieten wir hochwertige Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung an. Unser Ziel ist es, Ihnen eine Auszeit vom Alltag zu ermöglichen und für Ihre Schönheit und Gesundheit zu sorgen.</p>
-    </section>
-
     <section id="services">
         <h2 class="animated-text">Unsere Leistungen</h2>
-        <ul>
+        <ul class="menu">
             <li><a href="massage.html" target="_blank">Massage</a></li>
             <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
             <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
             <li><a href="waxing.html" target="_blank">Waxing</a></li>
             <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung</a></li>
             <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
+            <li><a href="über-uns.html" target="_blank">Über uns</a></li>
         </ul>
     </section>
 
