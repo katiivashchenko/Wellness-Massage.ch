@@ -20,6 +20,10 @@
             background-attachment: fixed;
             font-size: 16px; /* Уменьшенный размер основного текста */
         }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
         header {
             padding: 10px;
             position: relative;
@@ -77,19 +81,17 @@
             100% { opacity: 1; transform: translateY(0); }
         }
         .map {
-            margin-bottom: 50px; /* Увеличенный отступ перед футером */
-            margin-left: 10%;
-            margin-right: 10%;
+            margin-bottom: 50px;
         }
         footer {
-            margin-top: 30px; /* Дополнительный отступ перед ссылками в футере */
+            margin-top: 30px;
             padding-bottom: 20px;
         }
         footer p {
-            margin: 10px 0; /* Отступ между строками */
+            margin: 10px 0;
         }
         footer a {
-            margin-right: 10px; /* Отступ между ссылками */
+            margin-right: 10px;
         }
         .reviews {
             display: flex;
@@ -116,85 +118,87 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="animated-text">Wellness & Massage</h1>
-        <div class="contact-buttons">
-            <a href="tel:+41798615388">📞 Anrufen</a>
-            <a href="https://wa.me/41798615388">💬 WhatsApp</a>
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <h1 class="animated-text">Wellness & Massage</h1>
+            <div class="contact-buttons">
+                <a href="tel:+41798615388">📞 Anrufen</a>
+                <a href="https://wa.me/41798615388">💬 WhatsApp</a>
+            </div>
+        </header>
 
-    <section id="intro">
-        <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
-    </section>
+        <section id="intro">
+            <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+        </section>
 
-    <section id="services">
-        <h2 class="animated-text">Unsere Leistungen</h2>
-        <ul>
-            <li><a href="massage.html" target="_blank">Massage</a></li>
-            <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
-            <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
-            <li><a href="waxing.html" target="_blank">Waxing</a></li>
-            <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung</a></li>
-            <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
-        </ul>
-    </section>
+        <section id="services">
+            <h2 class="animated-text">Unsere Leistungen</h2>
+            <ul>
+                <li><a href="massage.html" target="_blank">Massage</a></li>
+                <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
+                <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
+                <li><a href="waxing.html" target="_blank">Waxing</a></li>
+                <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung</a></li>
+                <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
+            </ul>
+        </section>
 
-    <section id="about">
-        <h2 class="animated-text">Über uns</h2>
-        <p>Erfahren Sie mehr über unsere Philosophie, Werte und professionelle Dienstleistungen.</p>
-        <a href="über-uns.html" target="_blank" class="btn">Mehr erfahren</a>
-    </section>
+        <section id="about">
+            <h2 class="animated-text">Über uns</h2>
+            <p>Erfahren Sie mehr über unsere Philosophie, Werte und professionelle Dienstleistungen.</p>
+            <a href="über-uns.html" target="_blank" class="btn">Mehr erfahren</a>
+        </section>
 
-    <section class="reviews">
-        <h2 class="animated-text">Kundenbewertungen</h2>
-        <div class="review">
-            <img src="client1.jpg" alt="Kunde 1">
-            <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
-        </div>
-        <div class="review">
-            <img src="client2.jpg" alt="Kunde 2">
-            <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
-        </div>
-        <div class="review">
-            <img src="client3.jpg" alt="Kunde 3">
-            <p>„Sehr professioneller Service.“ - Mark S.</p>
-        </div>
-        <div class="review">
-            <img src="client4.jpg" alt="Kunde 4">
-            <p>„Exzellente Behandlung, sehr zu empfehlen!“ - Julia F.</p>
-        </div>
-        <div class="review">
-            <img src="client5.jpg" alt="Kunde 5">
-            <p>„Super Service, ich komme wieder!“ - Thomas L.</p>
-        </div>
-    </section>
+        <section class="reviews">
+            <h2 class="animated-text">Kundenbewertungen</h2>
+            <div class="review">
+                <img src="client1.jpg" alt="Kunde 1">
+                <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+            </div>
+            <div class="review">
+                <img src="client2.jpg" alt="Kunde 2">
+                <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+            </div>
+            <div class="review">
+                <img src="client3.jpg" alt="Kunde 3">
+                <p>„Sehr professioneller Service.“ - Mark S.</p>
+            </div>
+            <div class="review">
+                <img src="client4.jpg" alt="Kunde 4">
+                <p>„Exzellente Behandlung, sehr zu empfehlen!“ - Julia F.</p>
+            </div>
+            <div class="review">
+                <img src="client5.jpg" alt="Kunde 5">
+                <p>„Super Service, ich komme wieder!“ - Thomas L.</p>
+            </div>
+        </section>
 
-    <section class="map">
-        <h2 class="animated-text">Unser Standort</h2>
-        <p>
-            <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
-               target="_blank" 
-               rel="noopener noreferrer">
-                Löwengartenstrasse 12, 9400 Rorschach, Schweiz
-            </a>
-        </p>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000"
-            width="100%"
-            height="400"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy">
-        </iframe>
-    </section>
+        <section class="map">
+            <h2 class="animated-text">Unser Standort</h2>
+            <p>
+                <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    Löwengartenstrasse 12, 9400 Rorschach, Schweiz
+                </a>
+            </p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.627463899726!2d9.493228976506057!3d47.4773439711701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab72bf7eb8e2b%3A0x43e2756e6e431e3d!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2sch!4v1700000000000"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
 
-    <footer>
-        <p>
-            <a href="impressum.html" target="_blank">Impressum</a> |
-            <a href="datenschutz.html" target="_blank">Datenschutz</a>
-        </p>
-        <p>&copy; 2025 Wellness & Massage | Alle Rechte vorbehalten</p>
-    </footer>
+        <footer>
+            <p>
+                <a href="impressum.html" target="_blank">Impressum</a> |
+                <a href="datenschutz.html" target="_blank">Datenschutz</a>
+            </p>
+            <p>&copy; 2025 Wellness & Massage | Alle Rechte vorbehalten</p>
+        </footer>
+    </div>
 </body>
 </html>
