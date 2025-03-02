@@ -25,11 +25,18 @@
             position: relative;
             z-index: 10;
         }
-        h1, h2 {
-            font-family: Arial, sans-serif; /* Один и тот же шрифт для всех заголовков */
+        h1 {
+            font-family: Arial, sans-serif;
+            font-size: 36px; /* Увеличенный размер */
+            font-weight: bold; /* Жирный текст */
+            margin-bottom: 10px;
+            text-transform: capitalize; /* Первая буква заглавная, остальная - строчная */
+        }
+        h2 {
+            font-family: Arial, sans-serif; 
             font-size: 24px; /* Одинаковый размер заголовков */
             font-weight: normal; /* Сделать текст не жирным */
-            text-transform: capitalize; /* Первая буква заглавная, остальная - строчная */
+            text-transform: capitalize;
             margin-bottom: 10px;
         }
         a {
@@ -43,19 +50,21 @@
         .contact-buttons {
             display: flex;
             gap: 10px;
-            position: absolute;
-            top: 80px; /* Располагаем кнопки ниже заголовка */
-            right: 20px;
+            justify-content: center; /* Центрируем кнопки */
+            margin-top: 20px; /* Расстояние от заголовка */
         }
         .contact-buttons a {
-            background-color: #333;
-            padding: 6px 10px;
+            background-color: #D4AF37; /* Тот же золотой цвет */
+            color: #000; /* Черный текст */
+            padding: 10px 20px;
             border-radius: 5px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
+            text-transform: capitalize; /* Первая буква заглавная */
+            display: inline-block;
         }
         .contact-buttons a:hover {
-            background-color: #555;
+            background-color: #FFD700; /* Ярче при наведении */
         }
         section {
             margin-top: 40px;
