@@ -18,11 +18,18 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            font-size: 16px; /* Уменьшенный размер основного текста */
         }
         header {
             padding: 20px;
             position: relative;
             z-index: 10;
+        }
+        h1 {
+            font-size: 28px; /* Уменьшенный размер заголовка */
+        }
+        h2 {
+            font-size: 24px; /* Уменьшенный размер подзаголовков */
         }
         .contact-buttons {
             display: flex;
@@ -34,10 +41,10 @@
         .contact-buttons a {
             color: #C0C0C0;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             background-color: #333;
-            padding: 10px;
+            padding: 8px;
             border-radius: 5px;
             display: flex;
             align-items: center;
@@ -47,28 +54,25 @@
             background-color: #555;
         }
         section {
-            margin-top: 80px;
+            margin-top: 60px;
         }
-        h2 {
-            color: #D4AF37;
-            font-size: 28px;
-            margin-top: 40px;
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
-        .services {
-            list-style-type: none;
-            padding: 0;
+        .review {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 600px;
+            text-align: left;
         }
-        .services li {
-            margin: 10px 0;
-        }
-        .services a {
-            color: #C0C0C0;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .services a:hover {
-            color: #FFD700;
+        .review img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
         }
         .map iframe {
             max-width: 500px;
@@ -76,37 +80,36 @@
             display: block;
             margin: 0 auto;
         }
-        .address-link {
+        .map-link {
             color: #D4AF37;
-            font-weight: bold;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
         }
-        .address-link:hover {
+        .map-link:hover {
             color: #FFD700;
             text-decoration: underline;
         }
-        .about-section {
-            margin-top: 60px;
-        }
-        .about-link {
-            color: #D4AF37;
-            font-size: 28px;
+        .btn {
+            display: inline-block;
+            background-color: #D4AF37;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
             font-weight: bold;
-            display: block;
-            margin-top: 20px;
-            text-decoration: none;
+            margin-top: 15px;
         }
-        .about-link:hover {
-            color: #FFD700;
+        .btn:hover {
+            background-color: #FFD700;
         }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #111;
+        .animated-text {
+            animation: fadeInUp 2s ease-out;
         }
-        footer a {
-            color: #C0C0C0;
-            text-decoration: none;
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -118,12 +121,14 @@
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
         </div>
     </header>
+
     <section id="intro">
         <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
+
     <section id="services">
-        <h2 class="animated-text">UNSERE LEISTUNGEN</h2>
-        <ul class="services">
+        <h2 class="animated-text">Unsere Leistungen</h2>
+        <ul>
             <li><a href="massage.html" target="_blank">Massage</a></li>
             <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
             <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
@@ -132,17 +137,36 @@
             <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
         </ul>
     </section>
-    <section class="about-section">
+
+    <section id="about">
         <h2 class="animated-text">ÜBER UNS</h2>
-        <a href="über-uns.html" target="_blank" class="about-link">Mehr erfahren</a>
+        <p>Erfahren Sie mehr über unsere Philosophie, Werte und professionelle Dienstleistungen.</p>
+        <a href="über-uns.html" target="_blank" class="btn">Mehr erfahren</a>
     </section>
+
+    <section class="reviews">
+        <h2 class="animated-text">Kundenbewertungen</h2>
+        <div class="review">
+            <img src="images/client1.jpg" alt="Kundenfoto 1">
+            <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+        </div>
+        <div class="review">
+            <img src="images/client2.jpg" alt="Kundenfoto 2">
+            <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+        </div>
+        <div class="review">
+            <img src="images/client3.jpg" alt="Kundenfoto 3">
+            <p>„Sehr professioneller Service.“ - Mark S.</p>
+        </div>
+    </section>
+
     <section class="map">
         <h2 class="animated-text">Unser Standort</h2>
         <p>
             <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="address-link">
+               class="map-link">
                 Löwengartenstrasse 12, 9400 Rorschach, Schweiz
             </a>
         </p>
@@ -155,11 +179,7 @@
             loading="lazy">
         </iframe>
     </section>
-    <section>
-        <h2>Unsere Öffnungszeiten</h2>
-        <p>Mo - Sa: 09:00 - 19:00</p>
-        <p>So: Frei</p>
-    </section>
+
     <footer>
         <a href="impressum.html" target="_blank">Impressum</a> |
         <a href="datenschutz.html" target="_blank">Datenschutz</a>
