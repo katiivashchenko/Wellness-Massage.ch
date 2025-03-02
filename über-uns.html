@@ -61,6 +61,22 @@
         .back-to-home a:hover {
             color: #D4AF37;
         }
+        /* Анимация появления */
+        .animated-text {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -69,21 +85,21 @@
     </header>
     
     <section class="content">
-        <h2>Herzlich willkommen bei Wellness & Massage</h2>
-        <p>
-            Mein Name ist [Ваше имя], und ich bin eine erfahrene Masseurin und Spezialistin für Maniküre, Pediküre, Waxing und Laser-Haarentfernung.  
+        <h2 class="animated-text">Herzlich willkommen bei Wellness & Massage</h2>
+        <p class="animated-text">
+            Mein Name ist Katerina, und ich bin eine erfahrene Masseurin und Spezialistin für Maniküre, Pediküre, Waxing und Laser-Haarentfernung.  
             Mit Leidenschaft für Schönheit und Wohlbefinden biete ich hochwertige Dienstleistungen, die Ihnen helfen, sich zu entspannen, Ihre Haut zu pflegen und sich rundum wohlzufühlen.  
         </p>
-        <p>
+        <p class="animated-text">
             Mein Studio in Rorschach ist ein Ort der Ruhe und Entspannung, wo Sie professionelle Behandlungen in einer angenehmen Atmosphäre genießen können.  
             Ich arbeite mit hochwertigen Produkten und modernen Techniken, um beste Ergebnisse zu erzielen.  
         </p>
-        <p>
+        <p class="animated-text">
             Ich lade Sie herzlich ein, sich selbst von meinem Service zu überzeugen. Vereinbaren Sie noch heute einen Termin und gönnen Sie sich etwas Gutes!
         </p>
         
-        <h2>Galerie</h2>
-        <div class="photos">
+        <h2 class="animated-text">Galerie</h2>
+        <div class="photos animated-text">
             <img src="images/photo1.jpg" alt="Massage Studio">
             <img src="images/photo2.jpg" alt="Maniküre">
             <img src="images/photo3.jpg" alt="Pediküre">
@@ -92,7 +108,7 @@
             <img src="images/photo6.jpg" alt="Studio Innenraum">
         </div>
         
-        <div class="back-to-home">
+        <div class="back-to-home animated-text">
             <a href="index.html">⬅ Zurück zur Startseite</a>
         </div>
     </section>
