@@ -22,10 +22,10 @@
             padding: 20px;
         }
         h1 {
-            margin-bottom: 10px; /* Уменьшил отступ */
+            margin-bottom: 5px;
         }
         h2 {
-            margin-top: 10px; /* Уменьшил отступ */
+            margin-top: 5px;
             color: #D4AF37;
         }
         .content {
@@ -55,7 +55,7 @@
             padding: 10px;
             background-color: #D4AF37;
             color: #000;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
             border-radius: 5px;
             width: 200px;
@@ -89,6 +89,21 @@
         footer a:hover {
             text-decoration: underline;
         }
+        /* Кнопки контакта */
+        .contact-buttons a {
+            display: inline-block;
+            background-color: silver;
+            color: black;
+            padding: 10px 15px;
+            margin: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .contact-buttons a:hover {
+            background-color: gray;
+        }
     </style>
 </head>
 <body>
@@ -99,7 +114,7 @@
     <section class="content">
         <h2 class="animated-text">Herzlich willkommen bei Wellness & Massage</h2>
         <p class="animated-text">
-            Mein Name ist [Ваше имя], und ich bin eine erfahrene Masseurin und Spezialistin für Maniküre, Pediküre, Waxing und Laser-Haarentfernung.  
+            Mein Name ist Katerina, und ich bin eine erfahrene Masseurin und Spezialistin für Maniküre, Pediküre, Waxing und Laser-Haarentfernung.  
             Mit Leidenschaft für Schönheit und Wohlbefinden biete ich hochwertige Dienstleistungen, die Ihnen helfen, sich zu entspannen, Ihre Haut zu pflegen und sich rundum wohlzufühlen.  
         </p>
         <p class="animated-text">
@@ -129,5 +144,10 @@
         <a href="impressum.html" target="_blank">Impressum</a> |
         <a href="datenschutz.html" target="_blank">Datenschutz</a>
     </footer>
+
+    <div class="contact-buttons">
+        <a href="tel:+41798615388">📞 Telefon</a>
+        <a href="https://wa.me/41798615388">💬 WhatsApp</a>
+    </div>
 </body>
 </html>
