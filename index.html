@@ -28,6 +28,8 @@
         h1, h2 {
             font-family: Arial, sans-serif; /* Один и тот же шрифт для всех заголовков */
             font-size: 24px; /* Одинаковый размер заголовков */
+            font-weight: normal; /* Сделать текст не жирным */
+            text-transform: capitalize; /* Первая буква заглавная, остальная - строчная */
             margin-bottom: 10px;
         }
         a {
@@ -42,7 +44,7 @@
             display: flex;
             gap: 10px;
             position: absolute;
-            top: 10px;
+            top: 80px; /* Располагаем кнопки ниже заголовка */
             right: 20px;
         }
         .contact-buttons a {
@@ -94,7 +96,7 @@
     </section>
 
     <section id="services">
-        <h2 class="animated-text">UNSERE LEISTUNGEN</h2>
+        <h2 class="animated-text">Unsere Leistungen</h2>
         <ul>
             <li><a href="massage.html" target="_blank">Massage</a></li>
             <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
@@ -106,13 +108,13 @@
     </section>
 
     <section id="about">
-        <h2 class="animated-text">ÜBER UNS</h2>
+        <h2 class="animated-text">Über uns</h2>
         <p>Erfahren Sie mehr über unsere Philosophie, Werte und professionelle Dienstleistungen.</p>
         <a href="über-uns.html" target="_blank" class="btn">Mehr erfahren</a>
     </section>
 
     <section class="reviews">
-        <h2 class="animated-text">KUNDENBEWERTUNGEN</h2>
+        <h2 class="animated-text">Kundenbewertungen</h2>
         <div class="review">
             <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
         </div>
@@ -125,7 +127,7 @@
     </section>
 
     <section class="map">
-        <h2 class="animated-text">UNSER STANDORT</h2>
+        <h2 class="animated-text">Unser Standort</h2>
         <p>
             <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
                target="_blank" 
