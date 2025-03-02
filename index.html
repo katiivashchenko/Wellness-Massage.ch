@@ -49,23 +49,6 @@
         section {
             margin-top: 80px;
         }
-        .menu {
-            list-style: none;
-            padding: 0;
-        }
-        .menu li {
-            margin: 10px 0;
-        }
-        .menu a {
-            color: #D4AF37;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .menu a:hover {
-            text-decoration: underline;
-            color: #FFD700;
-        }
         .reviews {
             display: flex;
             flex-direction: column;
@@ -89,15 +72,50 @@
             padding: 20px;
             background-color: #111;
         }
-        footer a {
+        footer a, #services a {
             color: #C0C0C0;
             text-decoration: none;
+        }
+        #services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #services li {
+            margin: 10px 0;
         }
         .map iframe {
             max-width: 500px;
             width: 90%;
             display: block;
             margin: 0 auto;
+        }
+        .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 200px;
+            margin: 20px auto;
+        }
+        .back-to-home a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .back-to-home a:hover {
+            color: #D4AF37;
+        }
+        .address-link {
+            color: #D4AF37;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .address-link:hover {
+            color: #FFD700;
+            text-decoration: underline;
         }
         @media (max-width: 768px) {
             .contact-buttons {
@@ -114,6 +132,22 @@
                 height: 250px;
             }
         }
+        .animated-text {
+            animation: fadeInUp 2s ease-out;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .map-link {
+            color: #D4AF37;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .map-link:hover {
+            color: #FFD700;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -124,14 +158,12 @@
             <a href="https://wa.me/41798615388">💬 WhatsApp</a>
         </div>
     </header>
-
     <section id="intro">
         <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
-
     <section id="services">
         <h2 class="animated-text">Unsere Leistungen</h2>
-        <ul class="menu">
+        <ul>
             <li><a href="massage.html" target="_blank">Massage</a></li>
             <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
             <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
@@ -141,30 +173,13 @@
             <li><a href="über-uns.html" target="_blank">Über uns</a></li>
         </ul>
     </section>
-
-    <section class="reviews">
-        <h2 class="animated-text">Kundenbewertungen</h2>
-        <div class="review">
-            <img src="images/client1.jpg" alt="Kundenfoto 1">
-            <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
-        </div>
-        <div class="review">
-            <img src="images/client2.jpg" alt="Kundenfoto 2">
-            <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
-        </div>
-        <div class="review">
-            <img src="images/client3.jpg" alt="Kundenfoto 3">
-            <p>„Sehr professioneller Service.“ - Mark S.</p>
-        </div>
-    </section>
-
     <section class="map">
         <h2 class="animated-text">Unser Standort</h2>
         <p>
             <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
                target="_blank" 
                rel="noopener noreferrer" 
-               class="map-link">
+               class="address-link">
                 Löwengartenstrasse 12, 9400 Rorschach, Schweiz
             </a>
         </p>
@@ -177,13 +192,11 @@
             loading="lazy">
         </iframe>
     </section>
-
     <section>
         <h2>Unsere Öffnungszeiten</h2>
         <p>Mo - Sa: 09:00 - 19:00</p>
         <p>So: Frei</p>
     </section>
-
     <footer>
         <a href="impressum.html" target="_blank">Impressum</a> |
         <a href="datenschutz.html" target="_blank">Datenschutz</a>
