@@ -54,17 +54,20 @@
             text-align: center;
             margin-top: 20px;
             padding: 10px;
-            background-color: silver; /* Цвет фона кнопки */
-            color: black; /* Цвет текста кнопки */
+            background-color: transparent; /* Без фона */
+            color: black; /* Черный цвет текста */
             font-size: 18px;
             font-weight: bold;
             border-radius: 5px;
             width: 200px;
             margin: 20px auto;
             text-decoration: none;
+            border: 2px solid black; /* Черная рамка */
         }
         .back-to-home:hover {
-            background-color: gray; /* Цвет фона при наведении */
+            background-color: transparent; /* Без изменения фона */
+            color: gray; /* Цвет текста при наведении */
+            border-color: gray; /* Цвет рамки при наведении */
         }
         /* Анимация появления */
         .animated-text {
@@ -81,21 +84,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-        /* Кнопки контакта */
-        .contact-buttons a {
-            display: inline-block;
-            background-color: silver; /* Цвет фона кнопок */
-            color: black; /* Цвет текста кнопок */
-            padding: 10px 15px;
-            margin: 5px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .contact-buttons a:hover {
-            background-color: gray; /* Цвет фона при наведении на кнопки */
         }
     </style>
 </head>
@@ -128,14 +116,7 @@
             <img src="images/photo6.jpg" alt="Studio Innenraum">
         </div>
         
-        <div class="back-to-home animated-text">
-            <a href="index.html">⬅ Zurück zur Startseite</a>
-        </div>
+        <a href="index.html" class="back-to-home animated-text">⬅ Zurück zur Startseite</a>
     </section>
-    
-    <div class="contact-buttons">
-        <a href="tel:+41798615388">📞 Telefon</a>
-        <a href="https://wa.me/41798615388">💬 WhatsApp</a>
-    </div>
 </body>
 </html>
