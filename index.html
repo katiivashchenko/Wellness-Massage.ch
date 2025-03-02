@@ -89,40 +89,6 @@
             display: block;
             margin: 0 auto;
         }
-        .back-to-home {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            width: 200px;
-            margin: 20px auto;
-        }
-        .back-to-home a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .back-to-home a:hover {
-            color: #D4AF37;
-        }
-        @media (max-width: 768px) {
-            .contact-buttons {
-                position: static;
-                justify-content: center;
-                margin-top: 10px;
-            }
-            .contact-buttons a {
-                font-size: 16px;
-                padding: 8px;
-            }
-            .map iframe {
-                max-width: 100%;
-                height: 250px;
-            }
-        }
         .animated-text {
             animation: fadeInUp 2s ease-out;
         }
@@ -139,6 +105,13 @@
             color: #FFD700;
             text-decoration: underline;
         }
+        .about-us {
+            background-color: rgba(51, 51, 51, 0.5);
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -152,6 +125,12 @@
     <section id="intro">
         <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
     </section>
+
+    <section class="about-us">
+        <h2 class="animated-text">Über uns</h2>
+        <p>Willkommen bei Wellness & Massage! Wir sind Ihr professionelles Studio für Entspannung, Schönheit und Wohlbefinden. Mit unserer langjährigen Erfahrung bieten wir hochwertige Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung an. Unser Ziel ist es, Ihnen eine Auszeit vom Alltag zu ermöglichen und für Ihre Schönheit und Gesundheit zu sorgen.</p>
+    </section>
+
     <section id="services">
         <h2 class="animated-text">Unsere Leistungen</h2>
         <ul>
@@ -163,6 +142,7 @@
             <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
         </ul>
     </section>
+
     <section class="reviews">
         <h2 class="animated-text">Kundenbewertungen</h2>
         <div class="review">
@@ -178,6 +158,7 @@
             <p>„Sehr professioneller Service.“ - Mark S.</p>
         </div>
     </section>
+
     <section class="map">
         <h2 class="animated-text">Unser Standort</h2>
         <p>
@@ -197,11 +178,13 @@
             loading="lazy">
         </iframe>
     </section>
+
     <section>
         <h2>Unsere Öffnungszeiten</h2>
         <p>Mo - Sa: 09:00 - 19:00</p>
         <p>So: Frei</p>
     </section>
+
     <footer>
         <a href="impressum.html" target="_blank">Impressum</a> |
         <a href="datenschutz.html" target="_blank">Datenschutz</a>
