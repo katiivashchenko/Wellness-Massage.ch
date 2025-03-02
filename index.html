@@ -9,7 +9,7 @@
     <style>
         body {
             background-color: #000;
-            color: #D4AF37;
+            color: #D4AF37; /* Золотой цвет текста */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -31,6 +31,14 @@
         h2 {
             font-size: 24px; /* Уменьшенный размер подзаголовков */
         }
+        a {
+            color: #D4AF37; /* Все ссылки золотого цвета */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #FFD700; /* Ярче при наведении */
+            text-decoration: underline;
+        }
         .contact-buttons {
             display: flex;
             gap: 10px;
@@ -39,16 +47,14 @@
             right: 20px;
         }
         .contact-buttons a {
-            color: #C0C0C0;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
             background-color: #333;
             padding: 8px;
             border-radius: 5px;
             display: flex;
             align-items: center;
             gap: 5px;
+            font-size: 16px;
+            font-weight: bold;
         }
         .contact-buttons a:hover {
             background-color: #555;
@@ -56,47 +62,12 @@
         section {
             margin-top: 60px;
         }
-        .reviews {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        .review {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            max-width: 600px;
-            text-align: left;
-        }
-        .review img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-        }
-        .map iframe {
-            max-width: 500px;
-            width: 90%;
-            display: block;
-            margin: 0 auto;
-        }
-        .map-link {
-            color: #D4AF37;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .map-link:hover {
-            color: #FFD700;
-            text-decoration: underline;
-        }
         .btn {
             display: inline-block;
             background-color: #D4AF37;
             color: #000;
             padding: 10px 20px;
             border-radius: 5px;
-            text-decoration: none;
             font-size: 16px;
             font-weight: bold;
             margin-top: 15px;
@@ -147,15 +118,12 @@
     <section class="reviews">
         <h2 class="animated-text">Kundenbewertungen</h2>
         <div class="review">
-            <img src="images/client1.jpg" alt="Kundenfoto 1">
             <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
         </div>
         <div class="review">
-            <img src="images/client2.jpg" alt="Kundenfoto 2">
             <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
         </div>
         <div class="review">
-            <img src="images/client3.jpg" alt="Kundenfoto 3">
             <p>„Sehr professioneller Service.“ - Mark S.</p>
         </div>
     </section>
@@ -165,8 +133,7 @@
         <p>
             <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
                target="_blank" 
-               rel="noopener noreferrer" 
-               class="map-link">
+               rel="noopener noreferrer">
                 Löwengartenstrasse 12, 9400 Rorschach, Schweiz
             </a>
         </p>
