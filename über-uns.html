@@ -1,120 +1,128 @@
-<!DOCTYPE html>  <html lang="de">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Über uns - Wellness & Massage</title>  
-    <link rel="stylesheet" href="styles.css">  
-    <style>  
-        body {  
-            background-color: black;  
-            color: silver; /* Цвет текста */  
-            font-family: Arial, sans-serif;  
-            margin: 0;  
-            padding: 0;  
-            text-align: center;  
-            background-image: url('background.jpg');  
-            background-size: cover;  
-            background-position: center;  
-            background-attachment: fixed;  
-        }  
-        header {  
-            padding: 20px;  
-            margin-bottom: 0; /* Убираем отступ снизу */  
-        }  
-        h1 {  
-            color: gold; /* Заголовок в золотом цвете */  
-            margin-top: 0; /* Убираем отступ сверху */  
-            margin-bottom: 0; /* Убираем отступ снизу */  
-        }  
-        h2 {  
-            color: gold; /* Цвет подзаголовков */  
-            margin-top: 0; /* Убираем отступ сверху между заголовками */  
-        }  
-        .content {  
-            max-width: 900px;  
-            margin: 40px auto;  
-            padding: 20px;  
-            background-color: rgba(0, 0, 0, 0.8);  
-            border-radius: 10px;  
-        }  
-        .photos {  
-            display: flex;  
-            flex-wrap: wrap;  
-            justify-content: center;  
-            gap: 15px;  
-            margin-top: 20px;  
-            margin-bottom: 60px; /* Увеличен отступ снизу между последним изображением и кнопкой */  
-        }  
-        .photos img {  
-            width: 200px; /* Уменьшена ширина */  
-            height: 200px; /* Уменьшена высота */  
-            object-fit: cover;  
-            border-radius: 10px;  
-            border: 3px solid #D4AF37; /* Золотая рамка для изображений */  
-        }  
-        .back-to-home {  
-            text-align: center;  
-            padding: 10px;  
-            background-color: #808080; /* Серый цвет кнопки */  
-            color: black; /* Черный цвет текста */  
-            font-size: 18px;  
-            font-weight: bold;  
-            border-radius: 5px;  
-            width: 200px;  
-            margin: 40px auto 20px auto; /* Увеличен отступ сверху до 40px */  
-            text-decoration: none;  
-            border: 2px solid black; /* Черная рамка */  
-        }  
-        .back-to-home:hover {  
-            background-color: #A9A9A9; /* Более светлый серый при наведении */  
-            color: gray; /* Цвет текста при наведении */  
-            border-color: gray; /* Цвет рамки при наведении */  
-        }  
-        .back-to-home .arrow {  
-            font-size: 14px; /* Уменьшенный размер стрелки */  
-            margin-right: 10px; /* Отступ справа от стрелки */  
-        }  
-        /* Анимация появления */  
-        .animated-text {  
-            opacity: 0;  
-            transform: translateY(30px);  
-            animation: fadeInUp 1.5s ease-out forwards;  
-        }  
-        @keyframes fadeInUp {  
-            0% {  
-                opacity: 0;  
-                transform: translateY(30px);  
-            }  
-            100% {  
-                opacity: 1;  
-                transform: translateY(0);  
-            }  
-        }  
-    </style>  
-</head>  
-<body>  
-    <header>  
-        <h1 class="animated-text">Über uns</h1>  
-    </header>  <section class="content">  
-    <h2 class="animated-text">Herzlich willkommen bei Wellness & Massage</h2>  
-    <p class="animated-text">  
-        Mein Name ist Katerina, und ich bin eine erfahrene Masseurin und Spezialistin für Maniküre, Pediküre, Waxing und Laser-Haarentfernung.    
-        Mit Leidenschaft für Schönheit und Wohlbefinden biete ich hochwertige Dienstleistungen, die Ihnen helfen, sich zu entspannen, Ihre Haut zu pflegen und sich rundum wohlzufühlen.    
-    </p>  
-    <p class="animated-text">  
-        Mein Studio in Rorschach ist ein Ort der Ruhe und Entspannung, wo Sie professionelle Behandlungen in einer angenehmen Atmosphäre genießen können.    
-        Ich arbeite mit hochwertigen Produkten und modernen Techniken, um beste Ergebnisse zu erzielen.    
-    </p>  
-    <p class="animated-text">  
-        Ich lade Sie herzlich ein, sich selbst von meinem Service zu überzeugen. Vereinbaren Sie noch heute einen Termin und gönnen Sie sich etwas Gutes!  
-    </p>  
-      
-    <h2 class="animated-text">Galerie</h2>  
-    <div class="photos animated-text">  
-        <img src="images/photo1.jpg" alt="Massage Studio">  
-        <img src="images/photo2.jpg" alt="Maniküre">  
-        <img src="images/photo3.jpg" alt="Pediküre">  
-        <img src="images/photo4.jpg" alt="Waxing">  
-        <img src="images/photo5.jpg" alt="Laser Haarentfernung">  
-        <img src="images/photo6.jpg" alt="Studio Innenraum">  
-    </div>  
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns - Wellness & Massage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: black;
+            color: silver;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            padding: 20px;
+            margin-bottom: 0;
+        }
+        h1 {
+            color: gold;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        h2 {
+            color: gold;
+            margin-top: 0;
+        }
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+        .photos img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #D4AF37;
+        }
+        .back-to-home {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #808080;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 40px auto 20px auto;
+            text-decoration: none;
+            border: 2px solid black;
+        }
+        .back-to-home:hover {
+            background-color: #A9A9A9;
+            color: gray;
+            border-color: gray;
+        }
+        .back-to-home .arrow {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        .animated-text {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="animated-text">Über uns</h1>
+    </header>
+    
+    <section class="content">
+        <h2 class="animated-text">Herzlich willkommen bei Wellness & Massage</h2>
+        <p class="animated-text">
+            Mein Name ist Katerina, und ich bin eine erfahrene Masseurin und Spezialistin für Maniküre, Pediküre, Waxing und Laser-Haarentfernung.  
+            Mit Leidenschaft für Schönheit und Wohlbefinden biete ich hochwertige Dienstleistungen, die Ihnen helfen, sich zu entspannen, Ihre Haut zu pflegen und sich rundum wohlzufühlen.  
+        </p>  
+        <p class="animated-text">
+            Mein Studio in Rorschach ist ein Ort der Ruhe und Entspannung, wo Sie professionelle Behandlungen in einer angenehmen Atmosphäre genießen können.  
+            Ich arbeite mit hochwertigen Produkten und modernen Techniken, um beste Ergebnisse zu erzielen.  
+        </p>  
+        <p class="animated-text">
+            Ich lade Sie herzlich ein, sich selbst von meinem Service zu überzeugen. Vereinbaren Sie noch heute einen Termin und gönnen Sie sich etwas Gutes!  
+        </p>  
+
+        <h2 class="animated-text">Galerie</h2>  
+        <div class="photos animated-text">  
+            <img src="images/photo1.jpg" alt="Massage Studio">  
+            <img src="images/photo2.jpg" alt="Maniküre">  
+            <img src="images/photo3.jpg" alt="Pediküre">  
+            <img src="images/photo4.jpg" alt="Waxing">  
+            <img src="images/photo5.jpg" alt="Laser Haarentfernung">  
+            <img src="images/photo6.jpg" alt="Studio Innenraum">  
+        </div>  
+
+        <a href="index.html" class="back-to-home">
+            <span class="arrow">⬅</span> Zurück zur Startseite
+        </a>
+    </section>
+</body>
+</html>
