@@ -26,47 +26,45 @@
             z-index: 10;
         }
         h1 {
-            font-family: Arial, sans-serif;
-            font-size: 36px; /* Увеличенный размер */
-            font-weight: bold; /* Жирный текст */
+            font-size: 36px;
+            font-weight: bold;
             margin-bottom: 10px;
-            text-transform: capitalize; /* Первая буква заглавная, остальная - строчная */
+            text-transform: capitalize;
         }
         h2 {
-            font-family: Arial, sans-serif; 
-            font-size: 24px; /* Одинаковый размер заголовков */
-            font-weight: normal; /* Сделать текст не жирным */
+            font-size: 24px;
+            font-weight: normal;
             text-transform: capitalize;
             margin-bottom: 10px;
         }
         a {
-            color: #D4AF37; /* Все ссылки золотого цвета */
+            color: #D4AF37;
             text-decoration: none;
         }
         a:hover {
-            color: #FFD700; /* Ярче при наведении */
+            color: #FFD700;
             text-decoration: underline;
         }
         .contact-buttons {
             display: flex;
             gap: 10px;
-            justify-content: center; /* Центрируем кнопки */
-            margin-top: 20px; /* Расстояние от заголовка */
+            justify-content: center;
+            margin-top: 20px;
         }
         .contact-buttons a,
         .btn {
-            background-color: #808080; /* Серый цвет */
-            color: #fff; /* Белый текст */
+            background-color: #808080;
+            color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
             font-size: 16px;
             font-weight: bold;
-            text-transform: capitalize; /* Первая буква заглавная */
+            text-transform: capitalize;
             display: inline-block;
         }
         .contact-buttons a:hover,
         .btn:hover {
-            background-color: #A9A9A9; /* Светло-серый при наведении */
+            background-color: #A9A9A9;
         }
         section {
             margin-top: 40px;
@@ -77,6 +75,13 @@
         @keyframes fadeInUp {
             0% { opacity: 0; transform: translateY(50px); }
             100% { opacity: 1; transform: translateY(0); }
+        }
+        .map {
+            margin-bottom: 50px; /* Увеличенный отступ перед футером */
+        }
+        footer {
+            margin-top: 30px; /* Дополнительный отступ перед ссылками в футере */
+            padding-bottom: 20px;
         }
     </style>
 </head>
