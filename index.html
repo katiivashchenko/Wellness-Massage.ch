@@ -53,9 +53,10 @@
             justify-content: center; /* Центрируем кнопки */
             margin-top: 20px; /* Расстояние от заголовка */
         }
-        .contact-buttons a {
-            background-color: #D4AF37; /* Тот же золотой цвет */
-            color: #000; /* Черный текст */
+        .contact-buttons a,
+        .btn {
+            background-color: #808080; /* Серый цвет */
+            color: #fff; /* Белый текст */
             padding: 10px 20px;
             border-radius: 5px;
             font-size: 16px;
@@ -63,24 +64,12 @@
             text-transform: capitalize; /* Первая буква заглавная */
             display: inline-block;
         }
-        .contact-buttons a:hover {
-            background-color: #FFD700; /* Ярче при наведении */
+        .contact-buttons a:hover,
+        .btn:hover {
+            background-color: #A9A9A9; /* Светло-серый при наведении */
         }
         section {
             margin-top: 40px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #D4AF37;
-            color: #000;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .btn:hover {
-            background-color: #FFD700;
         }
         .animated-text {
             animation: fadeInUp 2s ease-out;
