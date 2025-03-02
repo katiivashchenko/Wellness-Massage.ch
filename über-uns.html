@@ -1,115 +1,120 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Erfahren Sie mehr über unser Wellness- und Massage-Studio und unsere professionelle Arbeit.">
-    <meta name="keywords" content="Wellness, Massage, Maniküre, Pediküre, Waxing, Laser-Haarentfernung, Entspannung, Schönheit">
-    <title>Über uns | Wellness & Massage</title>
-    <style>
-        body {
-            background-color: #000000;
-            color: #D4AF37;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #000000;
-            color: #D4AF37;
-            text-align: center;
-            padding: 20px;
-            font-size: 36px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        h1, h2 {
-            color: #D4AF37;
-            font-size: 36px;
-            text-align: center;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            margin-top: 40px;
-        }
-
-        .content {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #1a1a1a;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-        }
-
-        .content p {
-            color: #C0C0C0;
-            font-size: 18px;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        .service-button {
-            background-color: #1a1a1a;
-            color: #D4AF37;
-            font-size: 28px;
-            font-weight: bold;
-            padding: 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-        }
-
-        footer {
-            background-color: #000000;
-            color: #C0C0C0;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    Wellness & Massage
-</header>
-
-<main>
-    <h1>Über uns</h1>
-
-    <section class="content">
-        <h2>Willkommen bei Wellness & Massage</h2>
-        <p>
-            Mein Name ist Katerina, und ich bin eine erfahrene Masseurin sowie Spezialistin für Maniküre, Pediküre, Waxing und Laser-Haarentfernung.  
-            Mit Leidenschaft für Schönheit und Wohlbefinden biete ich hochwertige Behandlungen, die Ihnen helfen, sich zu entspannen und sich rundum wohlzufühlen.
-        </p>
-        <p>
-            In meinem Studio in Rorschach erwartet Sie eine angenehme Atmosphäre, moderne Techniken und professionelle Pflege. Lassen Sie sich verwöhnen und gönnen Sie sich eine kleine Auszeit vom Alltag.
-        </p>
-    </section>
-
-    <div class="button-container">
-        <a href="index.html" class="service-button">Zur Startseite</a>
-    </div>
-</main>
-
-<footer>
-    &copy; 2025 Wellness & Massage | Alle Rechte vorbehalten
-</footer>
-
-</body>
-</html>
+<!DOCTYPE html>  <html lang="de">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Über uns - Wellness & Massage</title>  
+    <link rel="stylesheet" href="styles.css">  
+    <style>  
+        body {  
+            background-color: black;  
+            color: silver; /* Цвет текста */  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            text-align: center;  
+            background-image: url('background.jpg');  
+            background-size: cover;  
+            background-position: center;  
+            background-attachment: fixed;  
+        }  
+        header {  
+            padding: 20px;  
+            margin-bottom: 0; /* Убираем отступ снизу */  
+        }  
+        h1 {  
+            color: gold; /* Заголовок в золотом цвете */  
+            margin-top: 0; /* Убираем отступ сверху */  
+            margin-bottom: 0; /* Убираем отступ снизу */  
+        }  
+        h2 {  
+            color: gold; /* Цвет подзаголовков */  
+            margin-top: 0; /* Убираем отступ сверху между заголовками */  
+        }  
+        .content {  
+            max-width: 900px;  
+            margin: 40px auto;  
+            padding: 20px;  
+            background-color: rgba(0, 0, 0, 0.8);  
+            border-radius: 10px;  
+        }  
+        .photos {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: center;  
+            gap: 15px;  
+            margin-top: 20px;  
+            margin-bottom: 60px; /* Увеличен отступ снизу между последним изображением и кнопкой */  
+        }  
+        .photos img {  
+            width: 200px; /* Уменьшена ширина */  
+            height: 200px; /* Уменьшена высота */  
+            object-fit: cover;  
+            border-radius: 10px;  
+            border: 3px solid #D4AF37; /* Золотая рамка для изображений */  
+        }  
+        .back-to-home {  
+            text-align: center;  
+            padding: 10px;  
+            background-color: #808080; /* Серый цвет кнопки */  
+            color: black; /* Черный цвет текста */  
+            font-size: 18px;  
+            font-weight: bold;  
+            border-radius: 5px;  
+            width: 200px;  
+            margin: 40px auto 20px auto; /* Увеличен отступ сверху до 40px */  
+            text-decoration: none;  
+            border: 2px solid black; /* Черная рамка */  
+        }  
+        .back-to-home:hover {  
+            background-color: #A9A9A9; /* Более светлый серый при наведении */  
+            color: gray; /* Цвет текста при наведении */  
+            border-color: gray; /* Цвет рамки при наведении */  
+        }  
+        .back-to-home .arrow {  
+            font-size: 14px; /* Уменьшенный размер стрелки */  
+            margin-right: 10px; /* Отступ справа от стрелки */  
+        }  
+        /* Анимация появления */  
+        .animated-text {  
+            opacity: 0;  
+            transform: translateY(30px);  
+            animation: fadeInUp 1.5s ease-out forwards;  
+        }  
+        @keyframes fadeInUp {  
+            0% {  
+                opacity: 0;  
+                transform: translateY(30px);  
+            }  
+            100% {  
+                opacity: 1;  
+                transform: translateY(0);  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <header>  
+        <h1 class="animated-text">Über uns</h1>  
+    </header>  <section class="content">  
+    <h2 class="animated-text">Herzlich willkommen bei Wellness & Massage</h2>  
+    <p class="animated-text">  
+        Mein Name ist Katerina, und ich bin eine erfahrene Masseurin und Spezialistin für Maniküre, Pediküre, Waxing und Laser-Haarentfernung.    
+        Mit Leidenschaft für Schönheit und Wohlbefinden biete ich hochwertige Dienstleistungen, die Ihnen helfen, sich zu entspannen, Ihre Haut zu pflegen und sich rundum wohlzufühlen.    
+    </p>  
+    <p class="animated-text">  
+        Mein Studio in Rorschach ist ein Ort der Ruhe und Entspannung, wo Sie professionelle Behandlungen in einer angenehmen Atmosphäre genießen können.    
+        Ich arbeite mit hochwertigen Produkten und modernen Techniken, um beste Ergebnisse zu erzielen.    
+    </p>  
+    <p class="animated-text">  
+        Ich lade Sie herzlich ein, sich selbst von meinem Service zu überzeugen. Vereinbaren Sie noch heute einen Termin und gönnen Sie sich etwas Gutes!  
+    </p>  
+      
+    <h2 class="animated-text">Galerie</h2>  
+    <div class="photos animated-text">  
+        <img src="images/photo1.jpg" alt="Massage Studio">  
+        <img src="images/photo2.jpg" alt="Maniküre">  
+        <img src="images/photo3.jpg" alt="Pediküre">  
+        <img src="images/photo4.jpg" alt="Waxing">  
+        <img src="images/photo5.jpg" alt="Laser Haarentfernung">  
+        <img src="images/photo6.jpg" alt="Studio Innenraum">  
+    </div>  
