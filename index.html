@@ -14,7 +14,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-image: url('images/background.jpg'); 
+            background-image: url('images/background.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -29,12 +29,8 @@
             position: relative;
             z-index: 10;
         }
-        h1, h2, p, a, ul, li, .review, iframe {
+        h1, h2, p, ul, li, a, img, iframe {
             animation: fadeInUp 2s ease-out;
-        }
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
         h1 {
             font-size: 28px;
@@ -62,7 +58,8 @@
             justify-content: center;
             margin-top: 20px;
         }
-        .contact-buttons a, .btn {
+        .contact-buttons a,
+        .btn {
             background-color: #808080;
             color: #fff;
             padding: 10px 20px;
@@ -72,11 +69,16 @@
             text-transform: capitalize;
             display: inline-block;
         }
-        .contact-buttons a:hover, .btn:hover {
+        .contact-buttons a:hover,
+        .btn:hover {
             background-color: #A9A9A9;
         }
         section {
             margin-top: 40px;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
         .map {
             margin-bottom: 50px;
@@ -87,6 +89,7 @@
         }
         footer p {
             margin: 10px 0;
+            font-size: 12px; /* Уменьшенный размер копирайта */
         }
         footer a {
             margin-right: 10px;
@@ -105,7 +108,6 @@
             border-radius: 10px;
             max-width: 200px;
             text-align: center;
-            animation-delay: 0.3s;
         }
         .review img {
             border-radius: 50%;
@@ -113,7 +115,6 @@
             height: 80px;
             object-fit: cover;
             margin-bottom: 10px;
-            animation: fadeInUp 2s ease-out;
         }
         iframe {
             width: 100%;
@@ -196,7 +197,7 @@
                 <a href="impressum.html" target="_blank">Impressum</a> |
                 <a href="datenschutz.html" target="_blank">Datenschutz</a>
             </p>
-            <p>&copy; 2025 Wellness & Massage | Alle Rechte vorbehalten</p>
+            <p style="font-size: 10px;">&copy; 2025 Wellness & Massage | Alle Rechte vorbehalten</p>
         </footer>
     </div>
 </body>
