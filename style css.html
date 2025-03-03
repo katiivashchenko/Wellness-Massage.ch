@@ -7,18 +7,11 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #111;
+  background: #111 url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #C0C0C0;
   text-align: center;
-  overflow-x: hidden; /* Убирает горизонтальный скролл */
-}
-
-/* Фоновое изображение (если нужно) */
-body {
-  background-image: url('images/background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 /* Ограничение ширины контента */
@@ -35,6 +28,7 @@ h1, h2, h3 {
   animation: fadeInUp 2s ease-out;
 }
 
+/* Ссылки */
 a {
   text-decoration: none;
   color: inherit;
@@ -45,57 +39,32 @@ a:hover {
   color: #FFD700;
 }
 
-/* Стили хедера */
+/* Хедер */
 header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
+  position: relative;
   z-index: 1000;
 }
 
-header .logo a {
+.logo {
   font-size: 24px;
   color: #FFD700;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-/* Навигация */
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  font-size: 18px;
-  color: #C0C0C0;
-  transition: color 0.3s ease, text-shadow 0.3s ease, letter-spacing 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #FFD700;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-  letter-spacing: 1px;
-}
-
 /* Кнопки контактов (телефон и WhatsApp) */
 .contact-buttons {
   display: flex;
   gap: 10px;
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 9999;
 }
 
 .contact-buttons a {
@@ -117,6 +86,10 @@ nav ul li a:hover {
 }
 
 /* Раздел услуг */
+#services {
+  padding: 40px 20px;
+}
+
 #services ul {
   list-style: none;
   padding: 0;
@@ -129,9 +102,10 @@ nav ul li a:hover {
 /* Отзывы */
 .reviews {
   display: flex;
-  flex-wrap: wrap; /* Позволяет отзывам адаптироваться под экран */
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  padding: 40px 20px;
 }
 
 .review {
@@ -149,11 +123,8 @@ nav ul li a:hover {
 }
 
 /* Карта */
-.map iframe {
-  max-width: 500px;
-  width: 90%;
-  display: block;
-  margin: 0 auto;
+.map {
+  margin: 40px 0;
 }
 
 .map-link {
@@ -167,29 +138,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Кнопка "назад на главную" */
-.back-to-home {
-  text-align: center;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 5px;
-  width: 200px;
-  margin: 20px auto;
-}
-
-.back-to-home a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.back-to-home a:hover {
-  color: #D4AF37;
-}
-
 /* Футер */
 footer {
   background-color: #111;
@@ -197,7 +145,6 @@ footer {
   text-align: center;
   padding: 20px;
   font-size: 14px;
-  margin-top: 40px;
 }
 
 footer a {
@@ -215,50 +162,23 @@ footer a:hover {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
 /* Адаптивность */
 @media (max-width: 768px) {
   header {
     padding: 15px;
-  }
-
-  header .logo a {
-    font-size: 20px;
-  }
-
-  nav ul {
     flex-direction: column;
     align-items: center;
   }
 
-  nav ul li {
-    margin-left: 0;
+  .contact-buttons {
+    position: relative;
+    top: auto;
+    right: auto;
     margin-top: 10px;
   }
 
-  .service-item {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .service-list {
+  .reviews {
     flex-direction: column;
-    gap: 10px;
-  }
-
-  .contact-buttons {
-    top: auto;
-    bottom: 20px;
-    right: 20px;
-    flex-direction: row;
-  }
-
-  .map iframe {
-    max-width: 100%;
-    height: 250px;
+    align-items: center;
   }
 }
