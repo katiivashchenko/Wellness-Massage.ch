@@ -14,11 +14,11 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-image: url('images/background.jpg'); /* Исправленный путь */
+            background-image: url('images/background.jpg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            font-size: 16px; /* Уменьшенный размер основного текста */
+            font-size: 16px;
         }
         .container {
             width: 80%;
@@ -29,8 +29,15 @@
             position: relative;
             z-index: 10;
         }
+        h1, h2, p, a, ul, li, .review, iframe {
+            animation: fadeInUp 2s ease-out;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
         h1 {
-            font-size: 28px; /* Уменьшенный размер заголовка */
+            font-size: 28px;
             font-weight: bold;
             margin-bottom: 10px;
             text-transform: capitalize;
@@ -55,8 +62,7 @@
             justify-content: center;
             margin-top: 20px;
         }
-        .contact-buttons a,
-        .btn {
+        .contact-buttons a, .btn {
             background-color: #808080;
             color: #fff;
             padding: 10px 20px;
@@ -66,19 +72,11 @@
             text-transform: capitalize;
             display: inline-block;
         }
-        .contact-buttons a:hover,
-        .btn:hover {
+        .contact-buttons a:hover, .btn:hover {
             background-color: #A9A9A9;
         }
         section {
             margin-top: 40px;
-        }
-        .animated-text {
-            animation: fadeInUp 2s ease-out;
-        }
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
         .map {
             margin-bottom: 50px;
@@ -107,6 +105,7 @@
             border-radius: 10px;
             max-width: 200px;
             text-align: center;
+            animation-delay: 0.3s;
         }
         .review img {
             border-radius: 50%;
@@ -114,6 +113,7 @@
             height: 80px;
             object-fit: cover;
             margin-bottom: 10px;
+            animation: fadeInUp 2s ease-out;
         }
         iframe {
             width: 100%;
@@ -128,7 +128,7 @@
 <body>
     <div class="container">
         <header>
-            <h1 class="animated-text">Wellness & Massage</h1>
+            <h1>Wellness & Massage</h1>
             <div class="contact-buttons">
                 <a href="tel:+41798615388">📞 Anrufen</a>
                 <a href="https://wa.me/41798615388">💬 WhatsApp</a>
@@ -136,11 +136,11 @@
         </header>
 
         <section id="intro">
-            <p class="animated-text">Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+            <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
         </section>
 
         <section id="services">
-            <h2 class="animated-text">Unsere Leistungen</h2>
+            <h2>Unsere Leistungen</h2>
             <ul>
                 <li><a href="massage.html" target="_blank">Massage</a></li>
                 <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
@@ -152,7 +152,7 @@
         </section>
 
         <section class="reviews">
-            <h2 class="animated-text">Kundenbewertungen</h2>
+            <h2>Kundenbewertungen</h2>
             <div class="review">
                 <img src="images/client1.jpg" alt="Kunde 1">
                 <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
@@ -176,7 +176,7 @@
         </section>
 
         <section class="map">
-            <h2 class="animated-text">Unser Standort</h2>
+            <h2>Unser Standort</h2>
             <p>
                 <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
                    target="_blank" 
