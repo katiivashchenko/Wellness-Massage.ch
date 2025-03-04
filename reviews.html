@@ -55,9 +55,15 @@
             font-size: 16px;
             display: inline-block;
             margin-top: 30px;
+            text-decoration: none; /* Убирает подчеркивание */
         }
         .btn:hover {
             background-color: #A9A9A9;
+        }
+        .btn::before {
+            content: "⬅️"; 
+            color: #fff; /* Белая стрелка */
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -86,7 +92,7 @@
                 <p>„Super Service, ich komme wieder!“ - Thomas L.</p>
             </div>
         </section>
-        <a href="index.html" class="btn">⬅️ Zurück zur Startseite</a>
+        <a href="index.html" class="btn">Zurück zur Startseite</a>
     </div>
 </body>
 </html>
