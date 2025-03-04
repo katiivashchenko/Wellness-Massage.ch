@@ -9,7 +9,7 @@
     <style>
         body {
             background-color: #000;
-            color: #D4AF37;
+            color: #D4AF37; /* Золотой цвет текста */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -36,8 +36,8 @@
         }
         h2 {
             font-size: 24px;
-            margin-bottom: 10px;
             cursor: pointer;
+            text-decoration: underline;
         }
         a {
             color: #D4AF37;
@@ -47,20 +47,26 @@
             color: #FFD700;
             text-decoration: underline;
         }
-        .hidden {
-            display: none;
-        }
         .contact-buttons {
             display: flex;
             gap: 10px;
             justify-content: center;
             margin-top: 20px;
         }
-        section {
-            margin-top: 40px;
+        .contact-buttons a {
+            background-color: #808080;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
         }
-        .reviews, .services-list {
-            margin-top: 20px;
+        .contact-buttons a:hover {
+            background-color: #A9A9A9;
+        }
+        .hidden {
+            display: none;
         }
         .review {
             background-color: #333;
@@ -69,6 +75,7 @@
             border-radius: 10px;
             max-width: 200px;
             text-align: center;
+            margin: 10px auto;
         }
         .review img {
             border-radius: 50%;
@@ -76,13 +83,6 @@
             height: 80px;
             object-fit: cover;
             margin-bottom: 10px;
-        }
-        footer {
-            margin-top: 30px;
-            padding-bottom: 20px;
-        }
-        footer p {
-            font-size: 12px;
         }
     </style>
 </head>
@@ -95,13 +95,15 @@
                 <a href="https://wa.me/41798615388">💬 WhatsApp</a>
             </div>
         </header>
+
         <section id="intro">
             <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
         </section>
 
-        <h2 onclick="toggleSection('services-list')">Unsere Leistungen</h2>
-        <section id="services" class="services-list hidden">
-            <ul>
+        <!-- Услуги -->
+        <section id="services">
+            <h2 onclick="toggleVisibility('serviceList')">Unsere Leistungen</h2>
+            <ul id="serviceList" class="hidden">
                 <li><a href="massage.html" target="_blank">Massage</a></li>
                 <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
                 <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
@@ -111,48 +113,52 @@
             </ul>
         </section>
 
-        <h2 onclick="toggleSection('reviews')">Bewerbung</h2>
-        <section id="reviews" class="reviews hidden">
-            <div class="review">
-                <img src="images/client1.jpg" alt="Kunde 1">
-                <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
-            </div>
-            <div class="review">
-                <img src="images/client2.jpg" alt="Kunde 2">
-                <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
-            </div>
-            <div class="review">
-                <img src="images/client3.jpg" alt="Kunde 3">
-                <p>„Sehr professioneller Service.“ - Mark S.</p>
-            </div>
-            <div class="review">
-                <img src="images/client4.jpg" alt="Kunde 4">
-                <p>„Exzellente Behandlung, sehr zu empfehlen!“ - Julia F.</p>
-            </div>
-            <div class="review">
-                <img src="images/client5.jpg" alt="Kunde 5">
-                <p>„Super Service, ich komme wieder!“ - Thomas L.</p>
+        <!-- Отзывы клиентов -->
+        <section class="reviews">
+            <h2 onclick="toggleVisibility('reviewList')">Kundenbewertungen</h2>
+            <div id="reviewList" class="hidden">
+                <div class="review">
+                    <img src="images/client1.jpg" alt="Kunde 1">
+                    <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+                </div>
+                <div class="review">
+                    <img src="images/client2.jpg" alt="Kunde 2">
+                    <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+                </div>
+                <div class="review">
+                    <img src="images/client3.jpg" alt="Kunde 3">
+                    <p>„Sehr professioneller Service.“ - Mark S.</p>
+                </div>
             </div>
         </section>
 
         <section class="map">
             <h2>Unser Standort</h2>
             <p>
-                <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" target="_blank">Löwengartenstrasse 12, 9400 Rorschach, Schweiz</a>
+                <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz" 
+                   target="_blank">Löwengartenstrasse 12, 9400 Rorschach, Schweiz</a>
             </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.569093626677!2d9.488349476496712!3d47.47889927115669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b06ef4f7ea3c9%3A0x578ea3f3c499d12a!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
         </section>
 
         <footer>
-            <p><a href="impressum.html" target="_blank">Impressum</a> | <a href="datenschutz.html" target="_blank">Datenschutz</a></p>
+            <p>
+                <a href="impressum.html" target="_blank">Impressum</a> |
+                <a href="datenschutz.html" target="_blank">Datenschutz</a>
+            </p>
             <p>&copy; 2025 Wellness & Massage | Alle Rechte vorbehalten</p>
         </footer>
     </div>
 
     <script>
-        function toggleSection(id) {
-            const section = document.getElementById(id);
-            section.classList.toggle('hidden');
+        function toggleVisibility(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.classList.contains("hidden")) {
+                element.style.display = "block";
+                element.classList.remove("hidden");
+            } else {
+                element.style.display = "none";
+            }
         }
     </script>
 </body>
