@@ -21,18 +21,6 @@
             font-size: 28px;
             margin-bottom: 20px;
         }
-        .btn {
-            background-color: #808080;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        .btn:hover {
-            background-color: #A9A9A9;
-        }
         .reviews {
             display: flex;
             flex-wrap: wrap;
@@ -59,12 +47,23 @@
             0% { opacity: 0; transform: translateY(50px); }
             100% { opacity: 1; transform: translateY(0); }
         }
+        .btn {
+            background-color: #808080;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 30px;
+        }
+        .btn:hover {
+            background-color: #A9A9A9;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Kundenbewertungen</h1>
-        <a href="index.html" class="btn">⬅️ Zurück zur Startseite</a>
         <section class="reviews">
             <div class="review">
                 <img src="images/client1.jpg" alt="Kunde 1">
@@ -87,6 +86,7 @@
                 <p>„Super Service, ich komme wieder!“ - Thomas L.</p>
             </div>
         </section>
+        <a href="index.html" class="btn">⬅️ Zurück zur Startseite</a>
     </div>
 </body>
 </html>
