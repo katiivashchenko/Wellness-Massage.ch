@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundenbewertungen</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #D4AF37;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #808080;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .btn:hover {
+            background-color: #A9A9A9;
+        }
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .review {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 250px;
+            text-align: center;
+            animation: fadeInUp 2s ease-out;
+        }
+        .review img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kundenbewertungen</h1>
+        <a href="index.html" class="btn">⬅️ Zurück zur Startseite</a>
+        <section class="reviews">
+            <div class="review">
+                <img src="images/client1.jpg" alt="Kunde 1">
+                <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
+            </div>
+            <div class="review">
+                <img src="images/client2.jpg" alt="Kunde 2">
+                <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
+            </div>
+            <div class="review">
+                <img src="images/client3.jpg" alt="Kunde 3">
+                <p>„Sehr professioneller Service.“ - Mark S.</p>
+            </div>
+            <div class="review">
+                <img src="images/client4.jpg" alt="Kunde 4">
+                <p>„Exzellente Behandlung, sehr zu empfehlen!“ - Julia F.</p>
+            </div>
+            <div class="review">
+                <img src="images/client5.jpg" alt="Kunde 5">
+                <p>„Super Service, ich komme wieder!“ - Thomas L.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
