@@ -39,6 +39,7 @@
             animation: fadeInUp 1s forwards 0.8s;
             text-align: left;
             display: inline-block;
+            width: 100%;
         }
 
         li {
@@ -47,6 +48,7 @@
             opacity: 0;
             transform: translateX(-50px);
             animation: slideInLeft 1s forwards;
+            white-space: nowrap; /* Запрещает перенос строки */
         }
 
         li:nth-child(even) {
@@ -54,22 +56,44 @@
             animation: slideInRight 1s forwards;
         }
 
+        li::before {
+            content: "➤ ";
+            color: #FFD700;
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
         a {
-            color: #fff; /* Белый цвет ссылок */
+            color: #fff;
             text-decoration: none;
             transition: color 0.3s ease-in-out;
-            display: inline-block;
-            font-weight: normal; /* Убираем жирность */
+            font-weight: normal;
+            display: block;
         }
 
         a:hover {
-            color: #FFD700; /* Золотой цвет при наведении */
+            color: #FFD700;
             text-decoration: underline;
+        }
+
+        /* Делаем красивое "&" */
+        .and-symbol {
+            font-style: italic;
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        /* Описание под ссылками */
+        .description {
+            font-size: 16px;
+            color: #ccc;
+            margin-top: 5px;
+            display: block;
         }
 
         .btn {
             background-color: #555; /* Серый фон кнопки */
-            color: #fff; /* Белый текст */
+            color: #fff;
             padding: 12px 20px;
             font-size: 16px;
             display: inline-block;
@@ -136,19 +160,44 @@
                 transform: translateX(0);
             }
         }
+
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Unsere Leistungen</h1>
         <ul>
-            <li><a href="massage.html" target="_blank">Massage – Entspannung & Wohlbefinden</a></li>
-            <li><a href="maniküre.html" target="_blank">Maniküre – Perfekte Nägel & Pflege</a></li>
-            <li><a href="pediküre.html" target="_blank">Pediküre – Gesunde Füße & Schönheit</a></li>
-            <li><a href="waxing.html" target="_blank">Waxing – Sanfte Haarentfernung</a></li>
-            <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung – Glatte Haut</a></li>
-            <li><a href="preisliste.html" target="_blank">Preisliste – Unsere Angebote</a></li>
+            <li>
+                <a href="massage.html" target="_blank">Massage <span class="and-symbol">&</span> Entspannung</a>
+                <span class="description">Genießen Sie eine wohltuende Massage zur Linderung von Verspannungen, Verbesserung der Durchblutung und völligen Entspannung.</span>
+            </li>
+
+            <li>
+                <a href="maniküre.html" target="_blank">Maniküre <span class="and-symbol">&</span> Pflege</a>
+                <span class="description">Perfekte Nägel mit professioneller Maniküre – Pflege, Feilen, Lackieren und individuelle Gestaltung für schöne Hände.</span>
+            </li>
+
+            <li>
+                <a href="pediküre.html" target="_blank">Pediküre <span class="and-symbol">&</span> Schönheit</a>
+                <span class="description">Gesunde und gepflegte Füße mit einer intensiven Pediküre – Entfernung von Hornhaut, Nagelpflege und entspannende Massage.</span>
+            </li>
+
+            <li>
+                <a href="waxing.html" target="_blank">Waxing <span class="and-symbol">&</span> Haarentfernung</a>
+                <span class="description">Sanfte Haarentfernung mit Wachs für eine langanhaltend glatte Haut – geeignet für verschiedene Körperbereiche.</span>
+            </li>
+
+            <li>
+                <a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung <span class="and-symbol">&</span> Glatte Haut</a>
+                <span class="description">Dauerhafte Haarentfernung mit modernster Laser-Technologie – effektiv, hautschonend und langanhaltend.</span>
+            </li>
+
+            <li>
+                <a href="preisliste.html" target="_blank">Preisliste <span class="and-symbol">&</span> Angebote</a>
+                <span class="description">Entdecken Sie unsere attraktiven Preise und Angebote für alle Dienstleistungen – transparente und faire Preise.</span>
+            </li>
         </ul>
+
         <a href="index.html" class="btn">Zurück zur Startseite</a>
     </div>
 </body>
