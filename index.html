@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wellness & Massage</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js" defer></script>
     <style>
         body {
             background-color: #000;
@@ -26,11 +25,6 @@
         }
         header {
             padding: 10px;
-            position: relative;
-            z-index: 10;
-        }
-        h1, h2, p, ul, li, a, img, iframe {
-            animation: fadeInUp 2s ease-out;
         }
         h1 {
             font-size: 28px;
@@ -77,10 +71,6 @@
         section {
             margin-top: 40px;
         }
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(50px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
         .map {
             margin-bottom: 50px;
         }
@@ -94,32 +84,6 @@
         }
         footer a {
             margin-right: 10px;
-        }
-        .reviews, #services-list {
-            display: none;
-        }
-        .review {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 200px;
-            text-align: center;
-        }
-        .review img {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        iframe {
-            width: 100%;
-            max-width: 600px;
-            height: 400px;
-            border: none;
-            border-radius: 10px;
-            margin-top: 10px;
         }
     </style>
 </head>
@@ -136,40 +100,14 @@
             <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
         </section>
         <section id="services">
-            <h2 onclick="toggleVisibility('services-list')" class="btn">Unsere Leistungen</h2>
-            <ul id="services-list">
-                <li><a href="massage.html" target="_blank">Massage</a></li>
-                <li><a href="maniküre.html" target="_blank">Maniküre</a></li>
-                <li><a href="pediküre.html" target="_blank">Pediküre</a></li>
-                <li><a href="waxing.html" target="_blank">Waxing</a></li>
-                <li><a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung</a></li>
-                <li><a href="preisliste.html" target="_blank">Preisliste</a></li>
-            </ul>
+            <h2>
+                <a href="services.html" target="_blank" class="btn">Unsere Leistungen</a>
+            </h2>
         </section>
         <section>
-            <h2 onclick="toggleVisibility('reviews')" class="btn">Kundenbewertungen</h2>
-            <div id="reviews" class="reviews">
-                <div class="review">
-                    <img src="images/client1.jpg" alt="Kunde 1">
-                    <p>„Tolle Massage, sehr entspannend!“ - Lisa M.</p>
-                </div>
-                <div class="review">
-                    <img src="images/client2.jpg" alt="Kunde 2">
-                    <p>„Maniküre und Pediküre perfekt gemacht!“ - Anna K.</p>
-                </div>
-                <div class="review">
-                    <img src="images/client3.jpg" alt="Kunde 3">
-                    <p>„Sehr professioneller Service.“ - Mark S.</p>
-                </div>
-                <div class="review">
-                    <img src="images/client4.jpg" alt="Kunde 4">
-                    <p>„Exzellente Behandlung, sehr zu empfehlen!“ - Julia F.</p>
-                </div>
-                <div class="review">
-                    <img src="images/client5.jpg" alt="Kunde 5">
-                    <p>„Super Service, ich komme wieder!“ - Thomas L.</p>
-                </div>
-            </div>
+            <h2>
+                <a href="reviews.html" target="_blank" class="btn">Kundenbewertungen</a>
+            </h2>
         </section>
         <section class="map">
             <h2>Unser Standort</h2>
