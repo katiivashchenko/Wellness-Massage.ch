@@ -14,7 +14,8 @@
         }
 
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             opacity: 0;
@@ -48,7 +49,10 @@
             opacity: 0;
             transform: translateX(-50px);
             animation: slideInLeft 1s forwards;
-            white-space: nowrap; /* Запрещает перенос строки */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         li:nth-child(even) {
@@ -68,7 +72,9 @@
             text-decoration: none;
             transition: color 0.3s ease-in-out;
             font-weight: normal;
-            display: block;
+            display: inline-block;
+            font-size: 22px;
+            position: relative;
         }
 
         a:hover {
@@ -76,11 +82,12 @@
             text-decoration: underline;
         }
 
-        /* Делаем красивое "&" */
-        .and-symbol {
+        /* Делаем красивое "<" в середине */
+        .middle-symbol {
             font-style: italic;
             color: #FFD700;
             font-weight: bold;
+            margin: 0 5px;
         }
 
         /* Описание под ссылками */
@@ -88,7 +95,8 @@
             font-size: 16px;
             color: #ccc;
             margin-top: 5px;
-            display: block;
+            text-align: center;
+            max-width: 90%;
         }
 
         .btn {
@@ -114,6 +122,21 @@
         .btn:hover {
             background-color: #777; /* Светло-серый цвет при наведении */
             transform: scale(1.05);
+        }
+
+        /* Адаптация под мобильные устройства */
+        @media (max-width: 600px) {
+            li {
+                font-size: 18px;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
         }
 
         /* Анимации */
@@ -168,32 +191,32 @@
         <h1>Unsere Leistungen</h1>
         <ul>
             <li>
-                <a href="massage.html" target="_blank">Massage <span class="and-symbol">&</span> Entspannung</a>
+                <a href="massage.html" target="_blank">Massage <span class="middle-symbol"><</span> Entspannung</a>
                 <span class="description">Genießen Sie eine wohltuende Massage zur Linderung von Verspannungen, Verbesserung der Durchblutung und völligen Entspannung.</span>
             </li>
 
             <li>
-                <a href="maniküre.html" target="_blank">Maniküre <span class="and-symbol">&</span> Pflege</a>
+                <a href="maniküre.html" target="_blank">Maniküre <span class="middle-symbol"><</span> Pflege</a>
                 <span class="description">Perfekte Nägel mit professioneller Maniküre – Pflege, Feilen, Lackieren und individuelle Gestaltung für schöne Hände.</span>
             </li>
 
             <li>
-                <a href="pediküre.html" target="_blank">Pediküre <span class="and-symbol">&</span> Schönheit</a>
+                <a href="pediküre.html" target="_blank">Pediküre <span class="middle-symbol"><</span> Schönheit</a>
                 <span class="description">Gesunde und gepflegte Füße mit einer intensiven Pediküre – Entfernung von Hornhaut, Nagelpflege und entspannende Massage.</span>
             </li>
 
             <li>
-                <a href="waxing.html" target="_blank">Waxing <span class="and-symbol">&</span> Haarentfernung</a>
+                <a href="waxing.html" target="_blank">Waxing <span class="middle-symbol"><</span> Haarentfernung</a>
                 <span class="description">Sanfte Haarentfernung mit Wachs für eine langanhaltend glatte Haut – geeignet für verschiedene Körperbereiche.</span>
             </li>
 
             <li>
-                <a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung <span class="and-symbol">&</span> Glatte Haut</a>
+                <a href="laser-haarentfernung.html" target="_blank">Laser-Haarentfernung <span class="middle-symbol"><</span> Glatte Haut</a>
                 <span class="description">Dauerhafte Haarentfernung mit modernster Laser-Technologie – effektiv, hautschonend und langanhaltend.</span>
             </li>
 
             <li>
-                <a href="preisliste.html" target="_blank">Preisliste <span class="and-symbol">&</span> Angebote</a>
+                <a href="preisliste.html" target="_blank">Preisliste <span class="middle-symbol"><</span> Angebote</a>
                 <span class="description">Entdecken Sie unsere attraktiven Preise und Angebote für alle Dienstleistungen – transparente und faire Preise.</span>
             </li>
         </ul>
