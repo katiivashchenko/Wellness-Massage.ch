@@ -51,27 +51,34 @@
             0% { opacity: 0; transform: translateY(50px); }
             100% { opacity: 1; transform: translateY(0); }
         }
+
         .btn {
-            background-color: #808080;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
+            background-color: #555; /* Серый фон кнопки */
+            color: #fff; /* Белый текст */
+            padding: 12px 20px;
             font-size: 16px;
             display: inline-block;
             margin-top: 30px;
-            text-decoration: none; /* Убирает подчеркивание */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 1.2s;
             position: fixed;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
         }
-        .btn:hover {
-            background-color: #A9A9A9;
-        }
+
         .btn::before {
-            content: "⬅️"; /* Белая стрелка */
+            content: "⬅ "; /* Белая стрелка слева */
             color: #fff;
-            margin-right: 8px;
+        }
+
+        .btn:hover {
+            background-color: #777; /* Светло-серый цвет при наведении */
+            transform: scale(1.05);
         }
     </style>
 </head>
