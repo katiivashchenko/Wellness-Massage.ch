@@ -1,141 +1,143 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellness & Massage</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-color: #000;
-            color: #D4AF37;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-image: url('images/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            font-size: 16px;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-        header {
-            padding: 10px;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-transform: capitalize;
-        }
-        h2 {
-            font-size: 24px;
-            font-weight: normal;
-            text-transform: capitalize;
-            margin-bottom: 10px;
-        }
-        a {
-            color: #D4AF37;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #FFD700;
-            text-decoration: underline;
-        }
-        .contact-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .contact-buttons a,
-        .btn {
-            background-color: #808080;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: capitalize;
-            display: inline-block;
-            cursor: pointer;
-        }
-        .contact-buttons a:hover,
-        .btn:hover {
-            background-color: #A9A9A9;
-        }
-        section {
-            margin-top: 40px;
-        }
-        .map {
-            margin-bottom: 50px;
-        }
-        iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-        }
-        footer {
-            margin-top: 30px;
-            padding-bottom: 20px;
-        }
-        footer p {
-            margin: 10px 0;
-            font-size: 12px;
-        }
-        footer a {
-            margin-right: 10px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness & Massage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #D4AF37;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-size: 16px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        header {
+            padding: 10px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            white-space: nowrap; /* Запрещает перенос текста */
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: normal;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+        a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #FFD700;
+            text-decoration: underline;
+        }
+        .contact-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .contact-buttons a,
+        .btn {
+            background-color: #808080;
+            color: #fff;
+            padding: 8px 16px; /* Уменьшил размер кнопок */
+            border-radius: 5px;
+            font-size: 14px; /* Сделал шрифт чуть меньше */
+            font-weight: bold;
+            text-transform: capitalize;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .contact-buttons a:hover,
+        .btn:hover {
+            background-color: #A9A9A9;
+        }
+        section {
+            margin-top: 40px;
+        }
+        .map {
+            margin-bottom: 50px;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px; /* Закругленные углы карты */
+        }
+        footer {
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+        footer p {
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        footer a {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Wellness & Massage</h1>
-            <div class="contact-buttons">
-                <a href="tel:+41798615388">📞 Anrufen</a>
-                <a href="https://wa.me/41798615388">💬 WhatsApp</a>
-            </div>
-        </header>
-        <section id="intro">
-            <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
-        </section>
-        <section id="services">
-            <h2>
-                <a href="services.html" target="_blank" class="btn">Unsere Leistungen</a>
-            </h2>
-        </section>
-        <section>
-            <h2>
-                <a href="reviews.html" target="_blank" class="btn">Kundenbewertungen</a>
-            </h2>
-        </section>
-        <section class="map">
-            <h2>Unser Standort</h2>
-            <p>
-                <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Löwengartenstrasse 12, 9400 Rorschach, Schweiz
-                </a>
-            </p>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.569093626677!2d9.488349476496712!3d47.47889927115669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b06ef4f7ea3c9%3A0x578ea3f3c499d12a!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2s!4v1700000000000"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
-        </section>
-        <footer>
-            <p>
-                <a href="impressum.html" target="_blank">Impressum</a> |
-                <a href="datenschutz.html" target="_blank">Datenschutz</a>
-            </p>
-            <p style="font-size: 10px;">&copy; 2025 Wellness & Massage | Alle Rechte vorbehalten</p>
-        </footer>
-    </div>
+    <div class="container">
+        <header>
+            <h1>Wellness & Massage</h1>
+            <div class="contact-buttons">
+                <a href="tel:+41798615388">📞 Anrufen</a>
+                <a href="https://wa.me/41798615388">💬 WhatsApp</a>
+            </div>
+        </header>
+        <section id="intro">
+            <p>Professionelle Massagen, Maniküre, Pediküre, Waxing und Laser-Haarentfernung.</p>
+        </section>
+        <section id="services">
+            <h2>
+                <a href="services.html" target="_blank" class="btn">Unsere Leistungen</a>
+            </h2>
+        </section>
+        <section>
+            <h2>
+                <a href="reviews.html" target="_blank" class="btn">Kundenbewertungen</a>
+            </h2>
+        </section>
+        <section class="map">
+            <h2>Unser Standort</h2>
+            <p>
+                <a href="https://www.google.com/maps?q=Löwengartenstrasse+12%2C+9400+Rorschach%2C+Schweiz"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Löwengartenstrasse 12, 9400 Rorschach, Schweiz
+                </a>
+            </p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.569093626677!2d9.488349476496712!3d47.47889927115669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479b06ef4f7ea3c9%3A0x578ea3f3c499d12a!2sL%C3%B6wengartenstrasse%2012%2C%209400%20Rorschach%2C%20Schweiz!5e0!3m2!1sde!2s!4v1700000000000"
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+        </section>
+        <footer>
+            <p>
+                <a href="impressum.html" target="_blank">Impressum</a> |
+                <a href="datenschutz.html" target="_blank">Datenschutz</a>
+            </p>
+            <p style="font-size: 10px;">&copy; 2025 Wellness & Massage | Alle Rechte vorbehalten</p>
+        </footer>
+    </div>
 </body>
 </html>
